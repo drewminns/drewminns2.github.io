@@ -1,0 +1,129 @@
+---
+layout: post
+title: "Week 1 - Recap"
+date: 2013-09-07 14:23
+comments: true
+categories: 
+---
+
+# Structural Elements
+###Used to Describe the content
+
+- **header**: Used to contain header content.
+- **footer**: Contains the footer content.
+- **nav**: Contains a navigation menu, or other navigation functionality for the page.
+- **section**: Used to define sections of a page. Regularly used to group articles.
+- **article**: Contains a piece of content such as a blog post or news item.
+- **aside**: Defines a block of content that is related to the main content around it.
+
+---
+
+
+# Resets
+
+Many browsers set defaults of html elements that aim to make unstyled pages readable. A reset is used to reduce these browser inconsistencies like margins, line heights, font sizes of headings. 
+
+####Chrome Default H1 Styling
+        h1 {
+            display: block;
+            font-size: 1.5em;
+            -webkit-margin-before: 0.83em;
+            -webkit-margin-after: 0.83em;
+            -webkit-margin-start: 0px;
+            -webkit-margin-end: 0px;
+            font-weight: bold;
+        }
+
+####Reset.css h1 Styling
+        h1 {
+            margin: 0;
+          padding: 0;
+          border: 0;
+          font-size: 100%;
+          font: inherit;
+          vertical-align: baseline;
+        }
+        
+---
+#Typography
+
+###Font Family
+Using the font-family property, you are able to specify what font an element will have. The font-family property works exactly like style sheet, you create a font stack that will act like a fallback system. The browser will try to use the first font listed and if that font is not present on a users computer, it will move down the list until one is found.
+
+#####Helvetica Neue Light Font Stack
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+        
+_Most users do not have Helvetica Neue installed on their computer and the font will appear first will be Helvetica if they are on a Mac and Arial if they are on a PC_
+
+###Web Fonts
+Web fonts allow fonts that are not regularly stored on a users computer be used on a website. Web fonts can be served from an internal source on the site or via an external source such as Google Web Fonts or Typekit.
+
+#####Internal Font Serving
+The font (or select characters) needs to be included in the site just like any other asset. Within your style sheet, you can create a variable that will allow the browser to know where your font is stored.
+
+_@font-face method_
+
+    @font-face {
+          font-family: 'MyWebFont';
+          src: url('webfont.eot'); /* IE9 Compat Modes */
+          src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+           url('webfont.woff') format('woff'), /* Modern Browsers */
+           url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+           url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+      }
+     }
+
+     body {
+       font-family: 'MyWebFont', Fallback, sans-serif;
+     }
+   
+#####External Font Serving
+If you do not have the font stored locally or is not readily available to convert, you can use third-party resources like Google Web Fonts to serve the font to the user. This allows the font not to be 'stolen' from your site as it is not hosted by you.
+
+**Google Web Fonts**
+
+_Place link from Google Web Fonts in the <head> tag of your index page_
+
+    <head>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans>   
+    </head> 
+
+_Put font family name in your CSS_
+
+    body {
+        font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    }
+ 
+ 
+#Media Queries
+Using media queries, you can make your site responsive to the screen size that it is being viewed on. A user viewing your site on an iPhone has much more limited space for content than someone on a computer does.
+
+The meta viewport tag tells the browser to display the page at the correct size that is designated.
+
+        <meta name="viewport" content="width=device-width, minimumscale=1.0, maximum-scale=1.0" />
+        
+The media element allows you to target a specific size that will be effected by the properties within.
+_This media query targets viewports 480px and smaller_
+
+        @media screen and (max-width: 480px) { }
+        
+Used on a desktop site, the layout can be changed to display differently when the viewport is resized (or viewed on device with a smaller screen size).
+
+_Resizing a Header_
+
+        // Desktop Header Size
+        header {
+         width: 100%;
+         height: 200px;
+         background-color: #ccc;
+        }
+        
+        // iPhone Header Size
+        @media screen and (max-width: 480px) {
+          header {
+            width: 80%;
+            height: 100px;
+            background-color: #f3f3f3;  
+          }
+        }
+        

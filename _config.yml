@@ -3,9 +3,9 @@
 # ----------------------- #
 
 url: http://drewminns.github.io
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+title: Web Programming 3
+subtitle: WEBD 221 - Drew Minns
+author: Drew Minns
 simple_search: http://google.com/search
 description:
 
@@ -19,7 +19,18 @@ date_format: "ordinal"
 subscribe_rss: /atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
-email:
+email: dminns@gmail.com
+
+navigation:
+- text: Home
+  url: /index.html
+- text: Lessons
+  url: /lessons.html
+- text: Useful Tools
+  url: /useful-tools.html
+- text: Info
+  url: /info.html
+
 
 # ----------------------- #
 #    Jekyll & Plugins     #
@@ -41,10 +52,11 @@ rdiscount:
     - smart
 pygments: false # default python pygments have been replaced by pygments.rb
 
-paginate: 10          # Posts per page on the blog index
+paginate: 1         # Posts per page on the blog index
 pagination_dir: blog  # Directory base for pagination URLs eg. /blog/page/2/
-recent_posts: 5       # Posts in the sidebar Recent Posts section
+recent_posts: 1       # Posts in the sidebar Recent Posts section
 excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
+
 
 titlecase: true       # Converts page and post titles to titlecase
 
@@ -63,13 +75,13 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.
 # ----------------------- #
 
 # Github repositories
-github_user:
+github_user: drewminns
 github_repo_count: 0
 github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user:
+twitter_user: drewisthe
 twitter_tweet_button: true
 
 # Google +1
