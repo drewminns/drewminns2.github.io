@@ -126,4 +126,6 @@ _Resizing a Header_
             background-color: #f3f3f3;  
           }
         }
-        
+
+###Assignment
+[Download](https://github.com/drewminns/drewminns.github.io/blob/master/assets/assignments/week1_templatestructure.zip)        
