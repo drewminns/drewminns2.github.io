@@ -128,4 +128,7 @@ _Resizing a Header_
         }
 
 ###Assignment
-[Download](https://github.com/drewminns/drewminns.github.io/blob/master/assets/assignments/week1_templatestructure.zip)        
+
+[Outline](https://docs.google.com/document/d/1s_u6vP9UUpMZGajAWQIfIHOM1PSG6jPjznts_OF6nho/edit?usp=sharing)
+---
+[Download Files](https://docs.google.com/file/d/0B1z6vJfOT3uJMFBfaTRwWUlFMVk/edit?usp=sharing)        
