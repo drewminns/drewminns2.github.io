@@ -7,6 +7,13 @@ sharing: true
 footer: true
 ---
 
+Contact
+=====
+
+[dminns@gmail.com](mailto:dminns@gmail.com)
+
+----
+
 Use of Frameworks or Templates
 =========
 I highly discourage the use of 3rd-party templates, frameworks and any plagiarism of code from external sources. Only when included in a lesson or strictly stated and required in an assignment or exercise, will these be accepted. I've been doing this for awhile, I'll know…
@@ -27,14 +34,4 @@ Submitting Assignments
 Assignments can be shared through either Dropbox or GitHub. Please provide a link to your assignment through email to [dminns@gmail.com](mailto:dminns@gmail.com) with all required files.
 
 Submitting assignments early does not earn a better grade. Review often.
-
-
-
-
-
-
-
-
-
-
 
