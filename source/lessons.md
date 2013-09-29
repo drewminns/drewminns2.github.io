@@ -8,6 +8,10 @@ footer: true
 ---
 
 # Week 1
-[Lesson Notes](http://localhost:4000/blog/2013/09/07/week-1/)
+[Lesson Notes](http://drewminns.github.io/blog/2013/09/07/week-1/)
 
-[Exercise](#)
+#Week 2
+[Lesson Notes](http://drewminns.github.io/blog/2013/09/14/writing-less-and-pushing-it-to-the-cloud/)
+
+#Week 3
+[Lesson Notes](http://drewminns.github.io/blog/2013/09/23/keeping-it-sassy-and-griddy/)

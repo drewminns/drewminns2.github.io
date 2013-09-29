@@ -1,0 +1,170 @@
+---
+layout: post
+title: "Gridz 4 Lyfe"
+date: 2013-09-29 14:40
+comments: true
+categories: 
+---
+
+##Class Links
+
+###Exercises
+- [Download from Github](https://github.com/drewminns/WEBD221---Week-4-Exercises)
+
+###Preprocessors
+- [Codekit](http://incident57.com/codekit/)
+- [the official LESS app](http://incident57.com/less/)
+- [SimpLESS](http://wearekiss.com/simpless)
+
+#Review
+The last 2 classes we've covered working with preprocessed languages such as LESS, Sass and SCSS. We've worked with variables, mixins, nesting, functions and operators.
+
+#Grids with Presentational Classes
+Grid systems are used to design and develop with consistent flow and spacing between objects. A typical grid system uses 12 columns with margins on either side to help with positioning and flow. Many grid systems including 960gs and Blueprint require the use of class names to define the width. Each column utilizes a float:left to make each column align next to other one.
+
+**Example using grid system.**
+    
+    <header class="grid_12"></header>
+    <article class="grid_8"></article>
+    <aside class="grid_4"></article>
+    
+The above code will allow the header tag to span all 12 columns of the grid. The article tag will span 8 columns and then the aside tag will span 4 columns and take up the remaining space in the row next to the article. Depending on the amount of columns set in the grid, you must make sure that you don't leave any orphan space next to a column section. For example, `<article class="grid_7"></article>` must have another element with 5 columns set to it placed next to it even if it is not filled with any content.
+
+#Grids with Non-Presentational Classes
+Using preprocessed CSS languages, we can remove the need for extra class names in our HTML file. Using variables set within LESS, the grid can be changed instantly based on any changes.
+
+The code used to do that is as follows
+
+    @column-width: 60;
+    @gutter-width: 20;
+    @columns: 12;
+
+    // Utility variable — you should never need to modify this
+    @gridsystem-width: (@column-width*@columns) + (@gutter-width*@columns) * 1px;
+    
+    @total-width: @gridsystem-width;
+    
+    .column(@x,@columns:@columns) {
+      display: inline;
+      float: left;
+      width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @gridsystem-width);
+      margin: 0 @total-width*((@gutter-width*.5)/@gridsystem-width);
+    }
+
+What the above code does is create the width of the grid and columns based on the variables set - @column-width, @gutter-width and @columns.
+
+###@column-width
+This is the pixel value of the width each column will have.
+
+###@gutter-width
+This is the pixel value of the margin between each column
+
+###@columns
+This is the number of Columns you want in your grid
+
+###@gridsystem-width
+
+Breaking down on the values we have set above we can clearly do the math.
+@gridsystem-width translates to 
+    
+    (60 * 12) + (20 * 12) * 1
+    (720) + (240) * 1px
+    960px
+
+The system multiplies the equation by 1px at the end so that a px value is added to the final number.
+
+###@total-width
+This is the a holder of the value obtained from the equation above. It can be reused in other aspects of the code, such as setting a fixed container width.
+
+###.column
+This is the mixin you will use in the stylesheet to define the width of an element.
+
+Here is a breakdown of the code with values obtained from variables declared above placed within. the @x variable will be the declaration of columns you will be using per column. ex .column(8) will give you an 8 column object.
+
+    .column(@x,@columns:@columns) {
+      display: inline;
+      float: left;
+      width: 960px*((((20+60)*@x)-20) / 960px);
+      margin: 0 960px*((20*.5)/960px);
+    }
+
+If we were add a value, the code will execute as follows
+
+    .column(8,@columns:@columns) {
+      display: inline;
+      float: left;
+      width: 960px*((((20+60)*8)-20) / 960px);
+      margin: 0 960px*(10/960px);
+    }
+    
+    //which calculates as follows
+    .column(8) {
+        display: inline;
+        float: left;
+        width: 620px;
+        margin: 0 10px
+    }
+    
+A very convoluted way to obtain a value, but this grid is flexible and all values can change by simply changing the variables.
+
+##Using the values in your stylesheets.
+What makes using presentational class names in your projects so inflexible is when you need to change your layout, you need to adjust all class names for the grid as well. ex grid_8 will need to become grid_7 on EVERY object you want to change.
+
+Non-presentational grids allow mixins to be called in your stylesheets. If you have multiple objects sharing the same class name, such as a photo thumbnail, you simply call the .column(#) mixin where needed.
+
+####Example using presentational classes
+    //index.html
+    <div class="photothumb grid_2">#</div>
+    <div class="photothumb grid_2">#</div>
+    <div class="photothumb grid_2">#</div>
+    <div class="photothumb grid_2">#</div>
+    <div class="photothumb grid_2">#</div>
+    <div class="photothumb grid_2">#</div>
+
+####Example using non-presentational classes
+    //index.html
+    <div class="photothumb">#</div>
+    <div class="photothumb">#</div>
+    <div class="photothumb">#</div>
+    <div class="photothumb">#</div>
+    <div class="photothumb">#</div>
+    <div class="photothumb">#</div>
+    
+    //main.less
+    .photothumb {
+        .column(2);
+    }
+    
+The above example illustrates how easily you can change the width of an object just by changing the value in the mixin. While presentational classes will require you to change every class name on your html objects.
+
+**Tada!**
+
+#Preprocessed CSS Structure and Workflow
+Using Preprocessed CSS is an absolute requirement in many agencies and startups as it helps speed up development time and aids in working collaboratively.
+
+It is possible to have all your variables, mixins in the same file, but you are running the risk of having a long stylesheet that will be difficult to navigate if you want to change a value.
+
+A recommended workflow is to separate your variables, mixins, typography, grid(if you are using one) and structure into separate files and have them compiled into one main stylesheet.
+
+####Example Structure
+    
+    -css
+      -reset.css
+      -main.less
+      -styles
+        -variables.less
+        -mixins.less
+        -grid.less
+        -typography.less
+    index.html
+    
+Separating these files can help you to quickly navigate to a file and change a value or reference a snippet if needed. Be sure to be cognizant that if any code in a file is referencing something in another file that you set up the reference accordingly. Using the `@import` function will clear any problems.
+
+Ex: if a piece of code in your typography.less is using a variable in your variables.less stylesheet, you will need to use `@import: variables.less;` at the top of the stylesheet to pull in those values.
+
+Your main.less stylesheet will be the one that will be compiled and served to the browser as main.css so be sure to import all the required files. 
+
+#Assignment
+[View on Github](https://github.com/drewminns/assignment2)
+
+
