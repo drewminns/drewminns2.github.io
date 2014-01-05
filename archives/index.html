@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives | Web Programming 2</title>
+  <title>Archives | Making The Internet</title>
   <meta name="author" content="Drew Minns">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-  <meta property="og:site_name" content="Web Programming 2"/>
+  <meta property="og:site_name" content="Making The Internet"/>
 
   
     <meta property="og:image" content="undefined"/>
   
 
   <link href="/favicon.png" rel="icon">
-  <link rel="alternate" href="/atom.xml" title="Web Programming 2" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="Making The Internet" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   
@@ -26,8 +26,8 @@
 
 <body>
   <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">Web Programming 2</a></h1>
-  <h2><a href="/"></a></h2>
+  <h1><a href="/">Making The Internet</a></h1>
+  <h2><a href="/">Drew Minns - WEBD 152</a></h2>
 </div>
 <nav id="main-nav" class="alignright">
   <ul>
@@ -66,17 +66,785 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2014-01-03T20:47:30.000Z"><a href="/hello-world/">Jan 3 2014</a></time>
+        <time datetime="2014-01-05T19:14:31.000Z"><a href="/week-1---say-it-right/">Jan 5 2014</a></time>
       
       
   
-    <h1 class="title"><a href="/hello-world/">Hello World</a></h1>
+    <h1 class="title"><a href="/week-1---say-it-right/">Week 1 - Say it right</a></h1>
   
 
     </header>
     <div class="entry">
       
-        <p>Welcome to <a href="http://zespia.tw/hexo" target="_blank">Hexo</a>! This is your very first post. Check <a href="http://zespia.tw/hexo/docs" target="_blank">documentation</a> to learn how to use.</p>
+        <h1 id="HTML5_Semantics-2c-_Form_Elements-2c-_Reset">HTML5 Semantics, Form Elements, Reset</h1>
+<p><strong>Week 1 - January 10th, 2014</strong></p>
+<h2 id="Contact_Info">Contact Info</h2>
+<h3 id="Email">Email</h3>
+<p>I can be reached at <a href="mailto:drew.minns@me.com">drew.minns@me.com</a> or <a href="drew.minns@humber.ca">drew.minns@humber.ca</a></p>
+<h3 id="Google_Hangouts">Google Hangouts</h3>
+<p><a href="dminns@gmail.com">dminns@gmail.com</a></p>
+<h3 id="Twitter">Twitter</h3>
+<p><a href="http://twitter.com/drewisthe" target="_blank">@drewisthe</a></p>
+<h3 id="Github">Github</h3>
+<p><a href="http://github.com/drewminns" target="_blank">github.com/drewminns</a></p>
+<h2 id="Policies">Policies</h2>
+<p><strong><em>I will not be teaching lessons twice. All notes and slides will be posted on this site.</em></strong></p>
+<p><strong><em>You will not be marked on attendance. I will paying attention to your participation however and will be mindful of that if extensions are needed or assignments are late </em></strong></p>
+<h4 id="Submitting_Assignments">Submitting Assignments</h4>
+<ul>
+<li>Late Assignments get removed 10% each day it is late. Including weekends</li>
+<li>No extra marks for early submissions</li>
+<li>Assignment submissions must include zip file with all code and link to live version of project.</li>
+<li>Save your zipfiles with the following format: assignment#_yourname.zip</li>
+<li>Use the same format for the subject line of your submission emails.</li>
+</ul>
+<p><strong><em>If there is an issue with anything, do not hesitate to contact me. I’m here to help you! </em></strong></p>
+<h2 id="Styling_is_a_bad_thing">Styling is a bad thing</h2>
+<p>By default, a site without styling is a perfect website. By adding CSS, we are adding extra weight to our users and need to be sure that we give a consistent experience across all browsers.</p>
+<h2 id="Reset_Your_Browser">Reset Your Browser</h2>
+<p>As you may have noticed, there are a world of browsers out there. Each browser has their own intricacies that may affect your design, such as margins, padding and typography.</p>
+<p>Using a reset stylesheet, you can have a clean starting point for each browser. These reset stylesheets enables a browser like Chrome have many of the same styling profile as Firefox.</p>
+<h3 id="Eric_Mayer-2019-s_Reset_-_-3c-a_href-3d-22-http-3a-2f-2f-www-cssreset-com-2f-scripts-2f-eric-meyer-reset-css-2f-22-3e-Link-3c-2f-a-3e-">Eric Mayer’s Reset - <a href="http://www.cssreset.com/scripts/eric-meyer-reset-css/" target="_blank">Link</a></h3>
+<pre><code><span class="comment">/** * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+    /* HTML5 display-role reset for older browsers */</span>
+<span class="tag">article</span>, <span class="tag">aside</span>, <span class="tag">details</span>, <span class="tag">figcaption</span>, <span class="tag">figure</span>, <span class="tag">footer</span>, <span class="tag">header</span>, <span class="tag">hgroup</span>, <span class="tag">menu</span>, <span class="tag">nav</span>, <span class="tag">section</span> <span class="rules">{
+    <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>;
+<span class="rule">}</span></span>
+<span class="tag">body</span> <span class="rules">{
+    <span class="rule"><span class="attribute">line-height</span>:<span class="value"> <span class="number">1</span></span></span>;
+<span class="rule">}</span></span>
+<span class="tag">ol</span>, <span class="tag">ul</span> <span class="rules">{
+    <span class="rule"><span class="attribute">list-style</span>:<span class="value"> none</span></span>;
+<span class="rule">}</span></span>
+<span class="tag">blockquote</span>, <span class="tag">q</span> <span class="rules">{
+    <span class="rule"><span class="attribute">quotes</span>:<span class="value"> none</span></span>;
+<span class="rule">}</span></span>
+<span class="tag">blockquote</span><span class="pseudo">:before</span>, <span class="tag">blockquote</span><span class="pseudo">:after</span>,<span class="tag">q</span><span class="pseudo">:before</span>, <span class="tag">q</span><span class="pseudo">:after</span> <span class="rules">{        <span class="rule"><span class="attribute">content</span>:<span class="value"> <span class="string">''</span></span></span>;
+    <span class="rule"><span class="attribute">content</span>:<span class="value"> none</span></span>;
+<span class="rule">}</span></span>
+<span class="tag">table</span> <span class="rules">{
+    <span class="rule"><span class="attribute">border-collapse</span>:<span class="value"> collapse</span></span>;
+    <span class="rule"><span class="attribute">border-spacing</span>:<span class="value"> <span class="number">0</span></span></span>;
+<span class="rule">}</span></span>
+</code></pre><h3 id="Normalize-css_-_-3c-a_href-3d-22-http-3a-2f-2f-www-cssreset-com-2f-scripts-2f-normalize-css-2f-22-3e-Link-3c-2f-a-3e-">Normalize.css - <a href="http://www.cssreset.com/scripts/normalize-css/" target="_blank">Link</a></h3>
+<pre><code><span class="comment">/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */</span>
+
+<span class="comment">/*
+ * Corrects `block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */</span>
+
+<span class="tag">article</span>,
+<span class="tag">aside</span>,
+<span class="tag">details</span>,
+<span class="tag">figcaption</span>,
+<span class="tag">figure</span>,
+<span class="tag">footer</span>,
+<span class="tag">header</span>,
+<span class="tag">hgroup</span>,
+<span class="tag">nav</span>,
+<span class="tag">section</span>,
+<span class="tag">summary</span> <span class="rules">{
+    <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>;
+<span class="rule">}</span></span>
+
+<span class="comment">/*
+ * Corrects `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */</span>
+
+<span class="tag">audio</span>,
+<span class="tag">canvas</span>,
+<span class="tag">video</span> <span class="rules">{
+    <span class="rule"><span class="attribute">display</span>:<span class="value"> inline-block</span></span>;
+    <span class="rule">*<span class="attribute">display</span>:<span class="value"> inline</span></span>;
+    <span class="rule">*<span class="attribute">zoom</span>:<span class="value"> <span class="number">1</span></span></span>;
+<span class="rule">}</span></span>
+
+<span class="comment">/*
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */</span>
+
+<span class="tag">audio</span><span class="pseudo">:not(</span><span class="attr_selector">[controls]</span>) <span class="rules">{
+    <span class="rule"><span class="attribute">display</span>:<span class="value"> none</span></span>;
+    <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">0</span></span></span>;
+<span class="rule">}</span></span>
+
+<span class="comment">/*
+ * Addresses styling for `hidden` attribute not present in IE 7/8/9, Firefox 3,
+ * and Safari 4.
+ * Known issue: no IE 6 support.
+ */</span>
+
+<span class="attr_selector">[hidden]</span> <span class="rules">{
+    <span class="rule"><span class="attribute">display</span>:<span class="value"> none</span></span>;
+<span class="rule">}</span></span>
+
+<span class="comment">/* ==========================================================================
+   Base
+   ========================================================================== */</span>
+
+<span class="comment">/*
+ * 1. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevents iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */</span>
+
+<span class="tag">html</span> <span class="rules">{
+    <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">100</span>%</span></span>; <span class="comment">/* 1 */</span>
+    <span class="rule"><span class="attribute">-webkit-text-size-adjust</span>:<span class="value"> <span class="number">100</span>%</span></span>; <span class="comment">/* 2 */</span>
+    <span class="rule"><span class="attribute">-ms-text-size-adjust</span>:<span class="value"> <span class="number">100</span>%</span></span>; <span class="comment">/* 2 */</span>
+<span class="rule">}</span></span>
+
+<span class="comment">/*
+ * Addresses `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */</span>
+
+<span class="tag">html</span>,
+<span class="tag">button</span>,
+<span class="tag">input</span>,
+<span class="tag">select</span>,
+<span class="tag">textarea</span> <span class="rules">{
+    <span class="rule"><span class="attribute">font-family</span>:<span class="value"> sans-serif</span></span>;
+<span class="rule">}</span></span>
+
+<span class="comment">/*
+ * Addresses margins handled incorrectly in IE 6/7.
+ */</span>
+
+<span class="tag">body</span> <span class="rules">{
+    <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span></span></span>;
+<span class="rule">}</span></span>
+
+<span class="comment">/* ==========================================================================
+   Links
+   ========================================================================== */</span>
+
+<span class="comment">/*
+ * Addresses `outline` inconsistency between Chrome and other browsers.
+ */</span>
+
+<span class="tag">a</span><span class="pseudo">:focus</span> <span class="rules">{
+    <span class="rule"><span class="attribute">outline</span>:<span class="value"> thin dotted</span></span>;
+<span class="rule">}</span></span>
+
+<span class="comment">/*
+ * Improves readability when focused and also mouse hovered in all browsers.
+ */</span>
+
+<span class="tag">a</span><span class="pseudo">:active</span>,
+<span class="tag">a</span><span class="pseudo">:hover</span> <span class="rules">{
+    <span class="rule"><span class="attribute">outline</span>:<span class="value"> <span class="number">0</span></span></span>;
+<span class="rule">}</span></span>
+
+<span class="comment">/* ==========================================================================
+   Typography
+   ========================================================================== */</span>
+
+<span class="comment">/*
+ * Addresses font sizes and margins set differently in IE 6/7.
+ * Addresses font sizes within `section` and `article` in Firefox 4+, Safari 5,
+ * and Chrome.
+ */</span>
+
+<span class="tag">h1</span> <span class="rules">{
+    <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">2</span>em</span></span>;
+    <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0.67</span>em <span class="number">0</span></span></span>;
+<span class="rule">}</span></span>
+
+<span class="tag">h2</span> <span class="rules">{
+    <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">1.5</span>em</span></span>;
+    <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0.83</span>em <span class="number">0</span></span></span>;
+<span class="rule">}</span></span>
+
+<span class="tag">h3</span> <span class="rules">{
+    <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">1.17</span>em</span></span>;
+    <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">1</span>em <span class="number">0</span></span></span>;
+<span class="rule">}</span></span>
+
+<span class="tag">h4</span> <span class="rules">{
+    <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">1</span>em</span></span>;
+    <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">1.33</span>em <span class="number">0</span></span></span>;
+<span class="rule">}</span></span>
+
+<span class="tag">h5</span> <span class="rules">{
+    <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">0.83</span>em</span></span>;
+    <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">1.67</span>em <span class="number">0</span></span></span>;
+<span class="rule">}</span></span>
+
+<span class="tag">h6</span> <span class="rules">{
+    <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">0.75</span>em</span></span>;
+    <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">2.33</span>em <span class="number">0</span></span></span>;
+<span class="rule">}</span></span>
+
+<span class="comment">/*
+ * Addresses styling not present in IE 7/8/9, Safari 5, and Chrome.
+ */</span>
+
+<span class="tag">abbr</span><span class="attr_selector">[title]</span> <span class="rules">{
+    <span class="rule"><span class="attribute">border-bottom</span>:<span class="value"> <span class="number">1</span>px dotted</span></span>;
+<span class="rule">}</span></span>
+
+<span class="comment">/*
+ * Addresses style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
+ */</span>
+
+<span class="tag">b</span>,
+<span class="tag">strong</span> <span class="rules">{
+    <span class="rule"><span class="attribute">font-weight</span>:<span class="value"> bold</span></span>;
+<span class="rule">}</span></span>
+
+<span class="tag">blockquote</span> <span class="rules">{
+    <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">1</span>em <span class="number">40</span>px</span></span>;
+<span class="rule">}</span></span>
+
+<span class="comment">/*
+ * Addresses styling not present in Safari 5 and Chrome.
+ */</span>
+
+<span class="tag">dfn</span> <span class="rules">{
+    <span class="rule"><span class="attribute">font-style</span>:<span class="value"> italic</span></span>;
+<span class="rule">}</span></span>
+
+<span class="comment">/*
+ * Addresses styling not present in IE 6/7/8/9.
+ */</span>
+
+<span class="tag">mark</span> <span class="rules">{
+    <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#ff0</span></span></span>;
+    <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#000</span></span></span>;
+<span class="rule">}</span></span>
+
+<span class="comment">/*
+ * Addresses margins set differently in IE 6/7.
+ */</span>
+
+<span class="tag">p</span>,
+<span class="tag">pre</span> <span class="rules">{
+    <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">1</span>em <span class="number">0</span></span></span>;
+<span class="rule">}</span></span>
+
+<span class="comment">/*
+ * Corrects font family set oddly in IE 6, Safari 4/5, and Chrome.
+ */</span>
+
+<span class="tag">code</span>,
+<span class="tag">kbd</span>,
+<span class="tag">pre</span>,
+<span class="tag">samp</span> <span class="rules">{
+    <span class="rule"><span class="attribute">font-family</span>:<span class="value"> monospace, serif</span></span>;
+    <span class="rule"><span class="attribute">_font-family</span>:<span class="value"> <span class="string">'courier new'</span>, monospace</span></span>;
+    <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">1</span>em</span></span>;
+<span class="rule">}</span></span>
+
+<span class="comment">/*
+ * Improves readability of pre-formatted text in all browsers.
+ */</span>
+
+<span class="tag">pre</span> <span class="rules">{
+    <span class="rule"><span class="attribute">white-space</span>:<span class="value"> pre</span></span>;
+    <span class="rule"><span class="attribute">white-space</span>:<span class="value"> pre-wrap</span></span>;
+    <span class="rule"><span class="attribute">word-wrap</span>:<span class="value"> break-word</span></span>;
+<span class="rule">}</span></span>
+
+<span class="comment">/*
+ * Addresses CSS quotes not supported in IE 6/7.
+ */</span>
+
+<span class="tag">q</span> <span class="rules">{
+    <span class="rule"><span class="attribute">quotes</span>:<span class="value"> none</span></span>;
+<span class="rule">}</span></span>
+
+<span class="comment">/*
+ * Addresses `quotes` property not supported in Safari 4.
+ */</span>
+
+<span class="tag">q</span><span class="pseudo">:before</span>,
+<span class="tag">q</span><span class="pseudo">:after</span> <span class="rules">{
+    <span class="rule"><span class="attribute">content</span>:<span class="value"> <span class="string">''</span></span></span>;
+    <span class="rule"><span class="attribute">content</span>:<span class="value"> none</span></span>;
+<span class="rule">}</span></span>
+
+<span class="tag">small</span> <span class="rules">{
+    <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">75</span>%</span></span>;
+<span class="rule">}</span></span>
+
+<span class="comment">/*
+ * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+ */</span>
+
+<span class="tag">sub</span>,
+<span class="tag">sup</span> <span class="rules">{
+    <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">75</span>%</span></span>;
+    <span class="rule"><span class="attribute">line-height</span>:<span class="value"> <span class="number">0</span></span></span>;
+    <span class="rule"><span class="attribute">position</span>:<span class="value"> relative</span></span>;
+    <span class="rule"><span class="attribute">vertical-align</span>:<span class="value"> baseline</span></span>;
+<span class="rule">}</span></span>
+
+<span class="tag">sup</span> <span class="rules">{
+    <span class="rule"><span class="attribute">top</span>:<span class="value"> -<span class="number">0.5</span>em</span></span>;
+<span class="rule">}</span></span>
+
+<span class="tag">sub</span> <span class="rules">{
+    <span class="rule"><span class="attribute">bottom</span>:<span class="value"> -<span class="number">0.25</span>em</span></span>;
+<span class="rule">}</span></span>
+
+<span class="comment">/* ==========================================================================
+   Lists
+   ========================================================================== */</span>
+
+<span class="comment">/*
+ * Addresses margins set differently in IE 6/7.
+ */</span>
+
+<span class="tag">dl</span>,
+<span class="tag">menu</span>,
+<span class="tag">ol</span>,
+<span class="tag">ul</span> <span class="rules">{
+    <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">1</span>em <span class="number">0</span></span></span>;
+<span class="rule">}</span></span>
+
+<span class="tag">dd</span> <span class="rules">{
+    <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">40</span>px</span></span>;
+<span class="rule">}</span></span>
+
+<span class="comment">/*
+ * Addresses paddings set differently in IE 6/7.
+ */</span>
+
+<span class="tag">menu</span>,
+<span class="tag">ol</span>,
+<span class="tag">ul</span> <span class="rules">{
+    <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">40</span>px</span></span>;
+<span class="rule">}</span></span>
+
+<span class="comment">/*
+ * Corrects list images handled incorrectly in IE 7.
+ */</span>
+
+<span class="tag">nav</span> <span class="tag">ul</span>,
+<span class="tag">nav</span> <span class="tag">ol</span> <span class="rules">{
+    <span class="rule"><span class="attribute">list-style</span>:<span class="value"> none</span></span>;
+    <span class="rule"><span class="attribute">list-style-image</span>:<span class="value"> none</span></span>;
+<span class="rule">}</span></span>
+
+<span class="comment">/* ==========================================================================
+   Embedded content
+   ========================================================================== */</span>
+
+<span class="comment">/*
+ * 1. Removes border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improves image quality when scaled in IE 7.
+ */</span>
+
+<span class="tag">img</span> <span class="rules">{
+    <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">0</span></span></span>; <span class="comment">/* 1 */</span>
+    <span class="rule"><span class="attribute">-ms-interpolation-mode</span>:<span class="value"> bicubic</span></span>; <span class="comment">/* 2 */</span>
+<span class="rule">}</span></span>
+
+<span class="comment">/*
+ * Corrects overflow displayed oddly in IE 9.
+ */</span>
+
+<span class="tag">svg</span><span class="pseudo">:not(</span><span class="pseudo">:root)</span> <span class="rules">{
+    <span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden</span></span>;
+<span class="rule">}</span></span>
+
+<span class="comment">/* ==========================================================================
+   Figures
+   ========================================================================== */</span>
+
+<span class="comment">/*
+ * Addresses margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */</span>
+
+<span class="tag">figure</span> <span class="rules">{
+    <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span></span></span>;
+<span class="rule">}</span></span>
+
+<span class="comment">/* ==========================================================================
+   Forms
+   ========================================================================== */</span>
+
+<span class="comment">/*
+ * Corrects margin displayed oddly in IE 6/7.
+ */</span>
+
+<span class="tag">form</span> <span class="rules">{
+    <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span></span></span>;
+<span class="rule">}</span></span>
+
+<span class="comment">/*
+ * Define consistent border, margin, and padding.
+ */</span>
+
+<span class="tag">fieldset</span> <span class="rules">{
+    <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">1</span>px solid <span class="hexcolor">#c0c0c0</span></span></span>;
+    <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span> <span class="number">2</span>px</span></span>;
+    <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">0.35</span>em <span class="number">0.625</span>em <span class="number">0.75</span>em</span></span>;
+<span class="rule">}</span></span>
+
+<span class="comment">/*
+ * 1. Corrects color not being inherited in IE 6/7/8/9.
+ * 2. Corrects text not wrapping in Firefox 3.
+ * 3. Corrects alignment displayed oddly in IE 6/7.
+ */</span>
+
+<span class="tag">legend</span> <span class="rules">{
+    <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">0</span></span></span>; <span class="comment">/* 1 */</span>
+    <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">0</span></span></span>;
+    <span class="rule"><span class="attribute">white-space</span>:<span class="value"> normal</span></span>; <span class="comment">/* 2 */</span>
+    <span class="rule">*<span class="attribute">margin-left</span>:<span class="value"> -<span class="number">7</span>px</span></span>; <span class="comment">/* 3 */</span>
+<span class="rule">}</span></span>
+
+<span class="comment">/*
+ * 1. Corrects font size not being inherited in all browsers.
+ * 2. Addresses margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improves appearance and consistency in all browsers.
+ */</span>
+
+<span class="tag">button</span>,
+<span class="tag">input</span>,
+<span class="tag">select</span>,
+<span class="tag">textarea</span> <span class="rules">{
+    <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">100</span>%</span></span>; <span class="comment">/* 1 */</span>
+    <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span></span></span>; <span class="comment">/* 2 */</span>
+    <span class="rule"><span class="attribute">vertical-align</span>:<span class="value"> baseline</span></span>; <span class="comment">/* 3 */</span>
+    <span class="rule">*<span class="attribute">vertical-align</span>:<span class="value"> middle</span></span>; <span class="comment">/* 3 */</span>
+<span class="rule">}</span></span>
+
+<span class="comment">/*
+ * Addresses Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */</span>
+
+<span class="tag">button</span>,
+<span class="tag">input</span> <span class="rules">{
+    <span class="rule"><span class="attribute">line-height</span>:<span class="value"> normal</span></span>;
+<span class="rule">}</span></span>
+
+<span class="comment">/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Corrects inability to style clickable `input` types in iOS.
+ * 3. Improves usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Removes inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */</span>
+
+<span class="tag">button</span>,
+<span class="tag">html</span> <span class="tag">input</span><span class="attr_selector">[type="button"]</span>, <span class="comment">/* 1 */</span>
+<span class="tag">input</span><span class="attr_selector">[type="reset"]</span>,
+<span class="tag">input</span><span class="attr_selector">[type="submit"]</span> <span class="rules">{
+    <span class="rule"><span class="attribute">-webkit-appearance</span>:<span class="value"> button</span></span>; <span class="comment">/* 2 */</span>
+    <span class="rule"><span class="attribute">cursor</span>:<span class="value"> pointer</span></span>; <span class="comment">/* 3 */</span>
+    <span class="rule">*<span class="attribute">overflow</span>:<span class="value"> visible</span></span>;  <span class="comment">/* 4 */</span>
+<span class="rule">}</span></span>
+
+<span class="comment">/*
+ * Re-set default cursor for disabled elements.
+ */</span>
+
+<span class="tag">button</span><span class="attr_selector">[disabled]</span>,
+<span class="tag">input</span><span class="attr_selector">[disabled]</span> <span class="rules">{
+    <span class="rule"><span class="attribute">cursor</span>:<span class="value"> default</span></span>;
+<span class="rule">}</span></span>
+
+<span class="comment">/*
+ * 1. Addresses box sizing set to content-box in IE 8/9.
+ * 2. Removes excess padding in IE 8/9.
+ * 3. Removes excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */</span>
+
+<span class="tag">input</span><span class="attr_selector">[type="checkbox"]</span>,
+<span class="tag">input</span><span class="attr_selector">[type="radio"]</span> <span class="rules">{
+    <span class="rule"><span class="attribute">box-sizing</span>:<span class="value"> border-box</span></span>; <span class="comment">/* 1 */</span>
+    <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">0</span></span></span>; <span class="comment">/* 2 */</span>
+    <span class="rule">*<span class="attribute">height</span>:<span class="value"> <span class="number">13</span>px</span></span>; <span class="comment">/* 3 */</span>
+    <span class="rule">*<span class="attribute">width</span>:<span class="value"> <span class="number">13</span>px</span></span>; <span class="comment">/* 3 */</span>
+<span class="rule">}</span></span>
+
+<span class="comment">/*
+ * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */</span>
+
+<span class="tag">input</span><span class="attr_selector">[type="search"]</span> <span class="rules">{
+    <span class="rule"><span class="attribute">-webkit-appearance</span>:<span class="value"> textfield</span></span>; <span class="comment">/* 1 */</span>
+    <span class="rule"><span class="attribute">-moz-box-sizing</span>:<span class="value"> content-box</span></span>;
+    <span class="rule"><span class="attribute">-webkit-box-sizing</span>:<span class="value"> content-box</span></span>; <span class="comment">/* 2 */</span>
+    <span class="rule"><span class="attribute">box-sizing</span>:<span class="value"> content-box</span></span>;
+<span class="rule">}</span></span>
+
+<span class="comment">/*
+ * Removes inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */</span>
+
+<span class="tag">input</span><span class="attr_selector">[type="search"]</span><span class="pseudo">::-webkit-search-cancel-button</span>,
+<span class="tag">input</span><span class="attr_selector">[type="search"]</span><span class="pseudo">::-webkit-search-decoration</span> <span class="rules">{
+    <span class="rule"><span class="attribute">-webkit-appearance</span>:<span class="value"> none</span></span>;
+<span class="rule">}</span></span>
+
+<span class="comment">/*
+ * Removes inner padding and border in Firefox 3+.
+ */</span>
+
+<span class="tag">button</span><span class="pseudo">::-moz-focus-inner</span>,
+<span class="tag">input</span><span class="pseudo">::-moz-focus-inner</span> <span class="rules">{
+    <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">0</span></span></span>;
+    <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">0</span></span></span>;
+<span class="rule">}</span></span>
+
+<span class="comment">/*
+ * 1. Removes default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improves readability and alignment in all browsers.
+ */</span>
+
+<span class="tag">textarea</span> <span class="rules">{
+    <span class="rule"><span class="attribute">overflow</span>:<span class="value"> auto</span></span>; <span class="comment">/* 1 */</span>
+    <span class="rule"><span class="attribute">vertical-align</span>:<span class="value"> top</span></span>; <span class="comment">/* 2 */</span>
+<span class="rule">}</span></span>
+
+<span class="comment">/* ==========================================================================
+   Tables
+   ========================================================================== */</span>
+
+<span class="comment">/*
+ * Remove most spacing between table cells.
+ */</span>
+
+<span class="tag">table</span> <span class="rules">{
+    <span class="rule"><span class="attribute">border-collapse</span>:<span class="value"> collapse</span></span>;
+    <span class="rule"><span class="attribute">border-spacing</span>:<span class="value"> <span class="number">0</span></span></span>;
+<span class="rule">}</span></span>
+</code></pre><h2 id="Semantic_Elements">Semantic Elements</h2>
+<p>Before HTML5 was in the picture, HTML elements could be defined with a Div with an ID or a class to be used to styling it. This can lead to confusion on a page as it will be difficult to tell what element does what in the code. Semantics are used to define exactly what role the content plays on a website.</p>
+<h3 id="Structural_Elements">Structural Elements</h3>
+<p><strong>Div</strong> - A generic container with special meaning</p>
+<p><strong>Form</strong> - A container that holds form elements on a page</p>
+<p><strong>Table</strong> - Contains tabular data</p>
+<ul>
+<li><strong>tbody</strong> - A block of rows that contains the data of a table</li>
+<li><strong>thead</strong> - A block of rows that represent the labels of a table</li>
+<li><strong>tfoot</strong> - A block of rows that represent the summaries or totals of a table</li>
+<li><strong>tr</strong> - A row of cells in a table. The horizontal row of a table</li>
+<li><strong>td</strong> - A data cell of a table. Contained in a row</li>
+</ul>
+<p><strong>Img</strong> - Defines an image on a page. Requires a source path to an image.</p>
+<h3 id="Typography_Elements">Typography Elements</h3>
+<p>Typography Elements include</p>
+<p><strong>Header Typography</strong> -<br>Used for titles and emphasis</p>
+<pre><code><span class="tag">&lt;<span class="title">h1</span>&gt;</span>Title 1<span class="tag">&lt;/<span class="title">h1</span>&gt;</span>
+<span class="tag">&lt;<span class="title">h2</span>&gt;</span>Title 2<span class="tag">&lt;/<span class="title">h2</span>&gt;</span>
+<span class="tag">&lt;<span class="title">h3</span>&gt;</span>Title 3<span class="tag">&lt;/<span class="title">h3</span>&gt;</span>
+<span class="tag">&lt;<span class="title">h4</span>&gt;</span>Title 4<span class="tag">&lt;/<span class="title">h4</span>&gt;</span>
+<span class="tag">&lt;<span class="title">h5</span>&gt;</span>Title 5<span class="tag">&lt;/<span class="title">h5</span>&gt;</span>
+<span class="tag">&lt;<span class="title">h6</span>&gt;</span>Title 6<span class="tag">&lt;/<span class="title">h6</span>&gt;</span>
+</code></pre><p><strong>Paragraph</strong></p>
+<pre><code><span class="tag">&lt;<span class="title">p</span>&gt;</span>content goes here<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+</code></pre><p><strong>Links</strong></p>
+<pre><code><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"link path goes here"</span>&gt;</span>Link Text<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+</code></pre><p><strong>Lists</strong></p>
+<ul>
+<li><p>List Element - li</p>
+<pre><code>  <span class="tag">&lt;<span class="title">li</span>&gt;</span>List Element<span class="tag">&lt;/<span class="title">li</span>&gt;</span>    
+</code></pre></li>
+<li><p>Unordered List - ul</p>
+<ul>
+<li>Element 1</li>
+<li>Element 2</li>
+<li>Element 3<pre><code>  <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">li</span>&gt;</span>Element 1<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">li</span>&gt;</span>Element 2<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">li</span>&gt;</span>Element 3<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+</code></pre></li>
+</ul>
+</li>
+<li><p>Ordered List - ol</p>
+<ol>
+<li>Element 1</li>
+<li>Element 2</li>
+<li>Element 3<pre><code> <span class="tag">&lt;<span class="title">ol</span>&gt;</span>
+     <span class="tag">&lt;<span class="title">li</span>&gt;</span>Element 1<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+     <span class="tag">&lt;<span class="title">li</span>&gt;</span>Element 2<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+     <span class="tag">&lt;<span class="title">li</span>&gt;</span>Element 3<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+ <span class="tag">&lt;/<span class="title">ol</span>&gt;</span>
+</code></pre></li>
+</ol>
+</li>
+</ul>
+<h3 id="HTML5_Elements">HTML5 Elements</h3>
+<p>HTML5 introduced new elements that were descriptive as to what part of the page they represented. Instead of using <strong>div id=”header”</strong>, you can use <strong>header</strong> along with a class or id for specific styling.</p>
+<h3 id="New_HTML5_Elements_include">New HTML5 Elements include</h3>
+<p><strong>Header</strong> - Defines the header of a page or a section. Contains the title of a page or a section.</p>
+<pre><code><span class="tag">&lt;<span class="title">header</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">h1</span>&gt;</span>Page Title!<span class="tag">&lt;/<span class="title">h1</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">header</span>&gt;</span>
+</code></pre><p><strong>Footer</strong> - Defines the footer of a page or a section</p>
+<pre><code><span class="tag">&lt;<span class="title">footer</span>&gt;</span>
+    Copyright 2014 - Drew Minns
+<span class="tag">&lt;/<span class="title">footer</span>&gt;</span>
+</code></pre><p><strong>Nav</strong> - Defines a section that contains only Navigation elements</p>
+<pre><code><span class="tag">&lt;<span class="title">nav</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"home.html"</span>&gt;</span>Home<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"page.html"</span>&gt;</span>Page<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">nav</span>&gt;</span>
+</code></pre><p><strong>Section</strong> - Defines a section in a document. Use an ID or a class to add styling and specificity.</p>
+<pre><code><span class="tag">&lt;<span class="title">section</span> <span class="attribute">id</span>=<span class="value">"post"</span>&gt;</span>
+    Content Goes Here
+<span class="tag">&lt;/<span class="title">section</span>&gt;</span>
+</code></pre><p><strong>Article</strong> - Defines an individual section of content. Typically used for a post in a blog or a collection of content.</p>
+<pre><code><span class="tag">&lt;<span class="title">article</span>&gt;</span>
+    Vestibulum id ligula porta felis euismod semper. Donec sed odio dui.
+<span class="tag">&lt;/<span class="title">article</span>&gt;</span>
+</code></pre><p><strong>Aside</strong> - Defines a section of content that is secondary to the main content. Often used as a sidebar.</p>
+<pre><code><span class="tag">&lt;<span class="title">aside</span>&gt;</span>
+    Vestibulum id ligula porta felis euismod semper. Donec sed odio dui.
+<span class="tag">&lt;/<span class="title">aside</span>&gt;</span>
+</code></pre><h2 id="Form_Elements">Form Elements</h2>
+<p>All forms need to be contained within <strong>form</strong> tags. These allows the form elements to be found easily within a page. These form elements can be styled through CSS</p>
+<p>Form elements that can be used include</p>
+<p><strong>Label</strong> - Used to define a label for a input field.</p>
+<pre><code><span class="tag">&lt;<span class="title">label</span>&gt;</span>First Name <span class="tag">&lt;<span class="title">input</span>&gt;</span><span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+</code></pre><label>First Name <input></input></label>
+
+<p><br></p>
+<hr>
+<p><br></p>
+<p><strong>Input</strong> - Fields that are used to input information into a page. Specific types of information can be defined through the <strong><em>type</em></strong> attribute on an input</p>
+<ul>
+<li><p><strong>type=”text”</strong> - Any type of content can be entered</p>
+<pre><code>  <span class="tag">&lt;<span class="title">label</span>&gt;</span>Your Name <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span>&gt;</span><span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+</code></pre>  <label>Your Name <input type="text"></label>
+
+</li>
+</ul>
+<p><br></p>
+<hr>
+<p><br></p>
+<ul>
+<li><p><strong>type=”number”</strong> - Only numbers may be entered</p>
+<pre><code>  <span class="tag">&lt;<span class="title">label</span>&gt;</span>Phone Number <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"number"</span>&gt;</span><span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+</code></pre>  <label>Phone Number <input type="number"></label>
+
+</li>
+</ul>
+<p><br></p>
+<hr>
+<p><br></p>
+<ul>
+<li><p><strong>type=”email”</strong> - Only email address can be entered</p>
+<pre><code>  <span class="tag">&lt;<span class="title">label</span>&gt;</span>Email Address <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"email"</span>&gt;</span><span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+</code></pre>  <label>Email Address <input type="email"></label>
+
+</li>
+</ul>
+<p><br></p>
+<hr>
+<p><br></p>
+<ul>
+<li><p><strong>type=”tel”</strong> - Used for Phone Numbers</p>
+<pre><code>  <span class="tag">&lt;<span class="title">label</span>&gt;</span> Telephone Number <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"tel"</span>&gt;</span><span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+</code></pre>  <label> Telephone Number <input type="tel"></label>
+
+</li>
+</ul>
+<p><br></p>
+<hr>
+<p><br></p>
+<ul>
+<li><p><strong>type=”file”</strong> - Used for file uploads</p>
+<pre><code>  <span class="tag">&lt;<span class="title">label</span>&gt;</span>Select a File <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"file"</span>&gt;</span><span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+</code></pre>  <label>Select a File <input type="file"></label>
+
+</li>
+</ul>
+<p><br></p>
+<hr>
+<p><br></p>
+<ul>
+<li><p><strong>type=”radio”</strong> - Used to provide radio buttons on a form. Use the name attributes need to be added to group the elements together. The checked attribute is used to define a default checked option. The value attribute is used to define the selected value.</p>
+<pre><code>  <span class="tag">&lt;<span class="title">label</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"radio"</span> <span class="attribute">name</span>=<span class="value">"selected"</span> <span class="attribute">value</span>=<span class="value">"Option 1"</span> <span class="attribute">checked</span>=<span class="value">"checked"</span>&gt;</span>Option 1<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">label</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"radio"</span> <span class="attribute">name</span>=<span class="value">"selected"</span> <span class="attribute">value</span>=<span class="value">"Option 2"</span>&gt;</span>Option 2<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+</code></pre>  <label><input type="radio" name="selected" checked="checked"> Option 1</label><br>  <label><input type="radio" name="selected"> Option 2</label>
+
+
+</li>
+</ul>
+<p><br></p>
+<hr>
+<p><br></p>
+<ul>
+<li><p><strong>type=”checkbox”</strong> - Used to define checkboxes. Attributes are similar to radio buttons: checked, values, name.</p>
+<pre><code>  <span class="tag">&lt;<span class="title">label</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">value</span>=<span class="value">"Option 1"</span>&gt;</span> Option 1<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">label</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">value</span>=<span class="value">"Option 2"</span>&gt;</span> Option 2<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+</code></pre>  <label><input type="checkbox" value="Option 1"> Option 1</label><br>  <label><input type="checkbox" value="Option 2"> Option 2</label>
+
+
+</li>
+</ul>
+<p><br></p>
+<hr>
+<p><br></p>
+<ul>
+<li><p><strong>type=”submit”</strong> - Used to submit values in a form. The value attribute can be used to change the name of the text displayed.</p>
+<p>  <code>&lt;input type=&quot;submit&quot; value=&quot;Send&quot;&gt;</code></p>
+  <input type="submit" value="Send">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</li>
+</ul>
 
       
     </div>
@@ -110,6 +878,15 @@
   
 
   
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/Semantic, Forms, Reset/">Semantic, Forms, Reset</a><small>1</small></li>
+  
+  </ul>
+</div>
+
 
   
 <div class="widget twitter">

@@ -362,14 +362,19 @@ article .entry dl dl {
 article .entry h1,
 article .entry h2 {
   font-weight: normal;
-  border-bottom: 1px solid #ddd;
   padding-bottom: 10px;
   margin-top: 20px;
 }
+
+article .entry h1 {
+  border: 0 none !important;
+}
+article .entry h2,
 article .entry h3,
 article .entry h4,
 article .entry h5,
 article .entry h6 {
+  border-bottom: 1px solid #ddd;
   font-weight: normal;
 }
 article .entry img,
