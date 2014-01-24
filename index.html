@@ -62,6 +62,170 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2014-01-18T19:08:38.000Z"><a href="/week-3---backgrounds,-box-model-and-fluid-layouts/">Jan 18 2014</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/week-3---backgrounds,-box-model-and-fluid-layouts/">Week 3 - Backgrounds, Box Model and Fluid Layouts</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <a id="more"></a>
+
+<h1 id="Cool_Links">Cool Links</h1>
+<ul>
+<li>Background Images - <a href="thepatternlibrary.com">The Pattern Library</a></li>
+<li>Repeating Patterns - <a href="subtlepatterns.com">Subtle Patterns</a></li>
+<li>Royalty Free Images - <a href="http://nos.twnsnd.co/" target="_blank">New Old Stock</a></li>
+<li>Fonts - <a href="http://www.losttype.com/" target="_blank">Lost Type Co-Op</a></li>
+<li>Fonts - <a href="https://www.theleagueofmoveabletype.com/" target="_blank">The League of Movable Type</a></li>
+</ul>
+<h1 id="Colours">Colours</h1>
+<p>Modern browser can benefit from the use of a broad spectrum of colours to style it’s elements. Typically colours are defined through hexidecimal values, commonly known as ‘hex values’. </p>
+<h3 id="Hexidecimal">Hexidecimal</h3>
+<pre><code><span class="attribute">color</span><span class="value">: <span class="hexcolor">#000000</span>;</span>
+</code></pre><p>Hex Values are read by a browser as a code to colours. It is treated as Red/Green/Blue spectrum with each colour given a two digit group of characters. The first and secret characters represent the red value, the third and forth characters represent the green value, the fifth and sixth characters represent the blue value. The characters range from a-f and 0-9 to create colour combinations.</p>
+<pre><code><span class="comment">// Red</span>
+<span class="attribute">color</span><span class="value">: <span class="hexcolor">#ff0000</span>;</span>
+<span class="comment">// Green</span>
+<span class="attribute">color</span><span class="value">: <span class="hexcolor">#00ff00</span>;</span>
+<span class="comment">// Blue</span>
+<span class="attribute">color</span><span class="value">: <span class="hexcolor">#0000ff</span>;</span>
+</code></pre><h3 id="RGBA">RGBA</h3>
+<pre><code><span class="attribute">color</span>: <span class="string">rgba(255,255,255,0.8);</span>
+</code></pre><p>While hex values are great for creating solid colours, what if you need a colour that has some transparency. Enter RGBA, meaning Red Blue Green Alpha. Instead of using hex codes for each value, the colours are defined by a range from 0-255. The final decimal value indicates the alpha level of the colour.</p>
+<pre><code><span class="comment">// Red 50% Alpha</span>
+<span class="attribute">color</span><span class="value">: rgba(<span class="number">255</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.5</span>);</span>
+<span class="comment">// Green 20% Alpha</span>
+<span class="attribute">color</span><span class="value">: rgba(<span class="number">0</span>,<span class="number">255</span>,<span class="number">0</span>,<span class="number">0.2</span>);</span>
+<span class="comment">// Blue 95% Alpha</span>
+<span class="attribute">color</span><span class="value">: rgba(<span class="number">0</span>,<span class="number">0</span>,<span class="number">255</span>,<span class="number">0.95</span>);</span>
+</code></pre><h1 id="Backgrounds">Backgrounds</h1>
+<p>Instead of using colours for backgrounds, images can be incorporated in a number of ways in your CSS</p>
+<h3 id="Background-Image">Background-Image</h3>
+<p>Using the background image value can allow an image to be set as your background.</p>
+<pre><code><span class="attribute">background-image</span>: <span class="string">url('background.jpg');</span>
+</code></pre><p>By default, this image will be the size of the image, will repeat across the page, start in the top left corner, and will scroll with the page.</p>
+<h3 id="Background-Repeat">Background-Repeat</h3>
+<p>If you do not want the background to repeat across the page, or only want the background to repeat a certain direction or not repeat at all, you can use the background-repeat property.</p>
+<pre><code>// Only <span class="keyword">repeat</span> horizontally
+background-<span class="keyword">repeat</span>: <span class="keyword">repeat</span>-x;
+// Only <span class="keyword">repeat</span> vertically
+background-<span class="keyword">repeat</span>: <span class="keyword">repeat</span>-y
+// Do <span class="keyword">not</span> <span class="keyword">repeat</span>
+background-<span class="keyword">repeat</span>: no-<span class="keyword">repeat</span>;
+</code></pre><h3 id="Background-Position">Background-Position</h3>
+<p>You can adjust where the background will begin on your site using the background-position property. This is particularly useful in use with the background-repeat property, if you want an image certained in the page. The values that it takes, work on the x and y dimensions of a page or by simply defining generic positioning values.</p>
+<pre><code><span class="comment">// Center Background Image vertically and horizontally</span>
+<span class="attribute">background-position</span><span class="value">: center center;</span>
+<span class="comment">// Background Image at top left corner</span>
+<span class="attribute">background-position</span><span class="value">: left top;</span>
+<span class="comment">//Background Image 200px from left and 500px from top</span>
+<span class="attribute">background-position</span><span class="value">: <span class="number">200</span>px <span class="number">500</span>px;</span>
+<span class="comment">//Background Image 150px from left and at the bottom</span>
+<span class="attribute">background-position</span><span class="value">: <span class="number">150</span>px bottom;</span>
+</code></pre><h3 id="Background-Attachment">Background-Attachment</h3>
+<p>By default, all background images will scroll with the page. You can change this functionality by defining a fixed value for the background-attachment property.</p>
+<pre><code><span class="comment">//Fixed Position Background</span>
+<span class="attribute">background-attachment</span><span class="value">: fixed;</span>
+</code></pre><h3 id="Background_Size">Background Size</h3>
+<p>By default, background images will use the size that they are saved at, but you can define the size that they are presented on a page. These images can be defined using width and height values in pixels or percentages.</p>
+<pre><code><span class="comment">// Background Size 800px wide and 200px tall</span>
+<span class="attribute">background-size</span><span class="value">: <span class="number">800</span>px <span class="number">200</span>px;</span>
+<span class="comment">// Background Size 100% wide and 300px tall</span>
+<span class="attribute">background-size</span><span class="value">: <span class="number">100</span>% <span class="number">300</span>px;</span>
+<span class="comment">// Background full size of screen</span>
+<span class="attribute">background-size</span><span class="value">: cover;</span>
+</code></pre><h1 id="Box_Model">Box Model</h1>
+<p>One of the most misunderstood things about a web page is how an object on the object reacts to dimensions given to it. Using border and padding will affect the dimensions of the object, often in ways, that are undesirable.</p>
+<p>Margin is used to create an area around the object. This will affect the layout and positioning of objects around it.</p>
+<p>Borders are used to define a border around an object. The width of the border, will affect the positioning and layout of objects around it.</p>
+<p>Padding is used to create spacing around the content in an object. The value of the padding will affect the position and layout of objects around it.</p>
+<p><img src="http://jessey.net/simon/articles/boxmodel.png" alt=""></p>
+<h3 id="Fixing_the_box_model_problem-">Fixing the box model problem.</h3>
+<p>Padding is one of these things that was not developed well within CSS. Padding should not affect the width and height of the object and not move the content around it. Instead, it should give spacing inside the object.</p>
+<p>To fix this problem, the box-sizing property can be used to have padding be used in a more effective way.</p>
+<p>Use the following code in your CSS to fix the box-model. The asterisk is used to apply it to all objects on the page.</p>
+<pre><code>* <span class="rules">{
+    <span class="rule"><span class="attribute">box-sizing</span>:<span class="value"> border-box</span></span>;
+<span class="rule">}</span></span>
+</code></pre><h1 id="Fixed_Vs_Fluid_Layout">Fixed Vs Fluid Layout</h1>
+<p>Typically, webpages use pixel values to define the dimensions of an object. While this is great for building a solid page, this can make building a page for different devices, very difficult. </p>
+<p><strong>Enter flexible layouts.</strong></p>
+<p>Using percentage values can ensure your page reacts to the size of the browser. On smaller screens, fixed pixel values will make an object be too large. Percentage based values are based on 0%-100% and relative to it’s encapsulating object. Using a max-width property on the container object will allow the object to have a flexible width.</p>
+<p><strong>Fixed Layout with full header, section and aside next to each other</strong></p>
+<pre><code>// HTML
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"container"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">header</span>&gt;</span>Header Content<span class="tag">&lt;/<span class="title">header</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">section</span>&gt;</span>Section Content<span class="tag">&lt;/<span class="title">section</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">aside</span>&gt;</span>Aside Content<span class="tag">&lt;/<span class="title">aside</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+// CSS
+#container {
+    width: 1080px;
+    margin: 0 auto;
+}
+header {
+    width: 1080px;
+}
+section {
+    float: left;
+    width: 740px;
+}
+aside {
+    float: left;
+    width: 340px;
+}
+</code></pre><p><strong>Fluid Layout with full header, section and aside next to each other</strong><br>    // HTML<br>    <div id="container"><br>        <header>Header Content</header><br>        <section>Section Content</section><br>        <aside>Aside Content</aside><br>    </div><br>    // CSS</p>
+<pre><code><span class="id">#container</span> <span class="rules">{
+ <span class="rule"><span class="attribute">max-width</span>:<span class="value"> <span class="number">1080</span>px</span></span>;
+<span class="rule">}</span></span>
+<span class="tag">header</span> <span class="rules">{
+    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100</span>%</span></span>;
+<span class="rule">}</span></span>
+<span class="tag">section</span> <span class="rules">{
+    <span class="rule"><span class="attribute">float</span>:<span class="value"> left</span></span>;
+    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">70</span>%</span></span>;
+<span class="rule">}</span></span>
+<span class="tag">aside</span> <span class="rules">{
+    <span class="rule"><span class="attribute">float</span>:<span class="value"> left</span></span>;
+    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">30</span>%</span></span>;
+<span class="rule">}</span></span>
+</code></pre>
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2014-01-17T03:05:08.000Z"><a href="/week-2---correcting-and-backgrounding/">Jan 16 2014</a></time>
       
       
@@ -928,6 +1092,8 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
 <div class="widget tag">
   <h3 class="title">Tags</h3>
   <ul class="entry">
+  
+    <li><a href="/tags/Background/">Background</a><small>1</small></li>
   
     <li><a href="/tags/Semantics/">Semantics</a><small>1</small></li>
   
