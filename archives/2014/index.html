@@ -66,6 +66,104 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2014-02-13T21:02:16.000Z"><a href="/week-6---typography-and-media-queries/">Feb 13 2014</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/week-6---typography-and-media-queries/">Week 6 - Typography and Media Queries</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h1 id="Typography_and_Media_Queries">Typography and Media Queries</h1>
+<p>Download lessons <a href="https://github.com/drewminns/week6lessons" target="_blank"><a href="https://github.com/drewminns/week6lessons">https://github.com/drewminns/week6lessons</a></a></p>
+<h3 id="Typography_in_CSS">Typography in CSS</h3>
+<p>Over the years, CSS has provided developers the ability to match a design very closely. Be it drop shadows, kerning, line-height and more, these are all attainable within CSS. In the past, to match these designs, an image was created and inserted in the HTML. This created sites with less accessible elements, and longer load times.</p>
+<p>Thankfully, CSS has developed into a strong tool that allows us to match these designs through code.</p>
+<h2 id="Basic_CSS_Typography_Styling">Basic CSS Typography Styling</h2>
+<ul>
+<li>Font-Size: Allows us to set the pixel size of a font.</li>
+<li>Font Family: Sets the font for the text to use.</li>
+<li>Color: Sets the color of a text element through Hex Code, RGBA or others</li>
+<li>Line-Height: Sets the height of lines of text using pixels.</li>
+<li>Font-Weight: Sets the weight of text<ul>
+<li>Strong: Bold styling</li>
+<li>Stronger Bolder Styling</li>
+<li>Normal: Defines normal, standard characters</li>
+<li>Light: Light Styling</li>
+<li>Lighter: Lighter Styling</li>
+</ul>
+</li>
+</ul>
+<h2 id="Advanced_CSS_Typography_Styling">Advanced CSS Typography Styling</h2>
+<h3 id="Text_Shadow-3a-">Text Shadow:</h3>
+<p>Defines a shadow on a text element, much like outer glow and drop shadow in Photoshop.</p>
+<pre><code><span class="tag">p</span> <span class="rules">{
+    <span class="rule"><span class="attribute">text-shadow</span>:<span class="value"> <span class="number">1</span>px <span class="number">1</span>px <span class="number">5</span>px <span class="hexcolor">#000</span></span></span>;
+<span class="rule">}</span></span>
+</code></pre><p>The syntax is read as the following:</p>
+<p><strong>text-shadow: horizontal-shadow vertical-shadow blur color;</strong></p>
+<h3 id="Letter_Spacing">Letter Spacing</h3>
+<p>Defines the kerning between characters of text, much like in Photoshop</p>
+<pre><code><span class="tag">p</span> <span class="rules">{
+    <span class="rule"><span class="attribute">letter-spacing</span>:<span class="value"> <span class="number">2</span>px</span></span>;
+<span class="rule">}</span></span>
+</code></pre><h3 id="Word_Wrap">Word Wrap</h3>
+<p>Long words that extends past the boundaries of a container can be broken automatically by using word-wrap</p>
+<pre><code><span class="tag">p</span> <span class="rules">{
+    <span class="rule"><span class="attribute">word-wrap</span>:<span class="value"> break-word</span></span>;
+<span class="rule">}</span></span>
+</code></pre><h3 id="Text-Overflow">Text-Overflow</h3>
+<p>Blocks of text that extend past the boundaries of a containing object can be shortened using the text-overflow rule. The options include shortening the text completely by clipping the extended text, or inserting an ellipsis to show that the text has been clipped and there is more present.</p>
+<pre><code><span class="tag">p</span> <span class="rules">{
+    <span class="rule"><span class="attribute">text-overflow</span>:<span class="value"> ellipsis</span></span>;
+<span class="rule">}</span></span>
+</code></pre><h2 id="Media_Queries">Media Queries</h2>
+<p>One of the main concepts in responsive development is the use of media queries to define styling at different screen sizes.</p>
+<p>The basic media query requires understanding the use of nesting. All styles that are to be defined for different screen sizes are nested within a media query.</p>
+<h4 id="How_to_make_a_Media_Query">How to make a Media Query</h4>
+<p>The first, most important piece of a media query is stating <strong>@media</strong>. This tells the browser to look for any styles contained with the media query.</p>
+<p>Once you have stated <strong>@media</strong> you can define a media type or any attributes of the media query required. Using type and an attribute, you can define exactly which device, screen size or a combination of both to target. Within this media query, you can define styles to be changed within.</p>
+<p>A basic media query to target desktops on computers:<br>    @media only screen and (min-width: 1200px) {<br>        /<em> styles go here </em>/<br>    }</p>
+<p>The above media query is designed as such: the <strong>only screen</strong> element states that only devices with screens will be targeted. These include desktops, laptops, smartphones and tablets.</p>
+<p>The second portion of the media query - <strong>min-width: 1200px</strong> is used to define what requirements must be met to display the contents of the media query.</p>
+<p>A media query is best used to define new styles for devices other than a desktop. Start designing for desktop, and use media queries to target others within.</p>
+<p><strong>More Reading</strong></p>
+<p><a href="http://cssmediaqueries.com/what-are-css-media-queries.html" target="_blank"><a href="http://cssmediaqueries.com/what-are-css-media-queries.html">http://cssmediaqueries.com/what-are-css-media-queries.html</a></a></p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+  
+    <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2014-02-07T03:24:25.000Z"><a href="/week-5---building-out-a-design/">Feb 6 2014</a></time>
       
       
