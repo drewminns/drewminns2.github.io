@@ -66,13 +66,81 @@
       
       
   
-    <h1 class="title"><a href="/week-7/">Week 7</a></h1>
+    <h1 class="title"><a href="/week-7/">Week 7 - Media Queries</a></h1>
   
 
     </header>
     <div class="entry">
       
-        
+        <h1 id="Media_Queries">Media Queries</h1>
+<p>Media queries are used to change the presentational content by limiting the scope of the stylesheet to a certain context set by width, height and color.</p>
+<p>The usage of media queries is widespread in responsive design because of the ability to target very specific screen sizes and devices.</p>
+<p>A media query can be used multiple ways</p>
+<p>Link</p>
+<pre><code><span class="tag">&lt;<span class="title">link</span> <span class="attribute">href</span>=<span class="value">"responsive.css"</span> <span class="attribute">media</span>=<span class="value">"screen and (min-width: 701px) and (max-width: 900px)"</span>&gt;</span>
+</code></pre><p>In a stylesheet</p>
+<pre><code>@media only screen <span class="literal">and</span> (<span class="keyword">min</span><span class="attribute">-width</span>: <span class="number">701</span>px) <span class="literal">and</span> (<span class="keyword">max</span><span class="attribute">-width</span>: <span class="number">900</span>px) {
+}
+</code></pre><h3 id="Operators_in_a_media_query">Operators in a media query</h3>
+<p>Media queries except operators to create complex media queries. These operators and and, only and not</p>
+<h5 id="and">and</h5>
+<p>and is used to combine media features together into one chain. All features of the media query that you want to select an object must have an and separating them.</p>
+<p><strong>Example</strong></p>
+<p>@media screen and (min-width: 700px) and (orientation: landscape) { … }</p>
+<h5 id="only">only</h5>
+<p>only is used to be provide specific styles to certain users. This can be used to prevent certain objects that a browser will not support from displaying.</p>
+<p><strong>Example</strong></p>
+<p>@media only print { … }</p>
+<h5 id="not">not</h5>
+<p>not is used to negate all previous queries that include the same context.</p>
+<p><strong>Example</strong></p>
+<p>@media print not screen { … }</p>
+<h5 id="comma-seperated_lists">comma-seperated lists</h5>
+<p>Commas act like or operators between media features.</p>
+<p><strong>Example</strong></p>
+<p>@media (min-width: 700px), handheld and (orientation: landscape) { … }<br>The above media query would target devices devices that have a screen larger than 700px and handheld devices that are ONLY in landscape mode. If the handheld device was in portrait mode, the media query would not apply unless it had a screen larger than 700px.</p>
+<h3 id="Media_Types">Media Types</h3>
+<p>Targets the output of the display. Used to target phones, printers, screens, etc.</p>
+<p><strong>all</strong> Used for all media type devices</p>
+<p><strong>aural</strong> Used for speech and sound synthesizers</p>
+<p><strong>braille</strong> Used for braille tactile feedback devices</p>
+<p><strong>embossed</strong> Used for paged braille printers</p>
+<p><strong>handheld</strong> Used for small or handheld devices</p>
+<p><strong>print</strong> Used for printers</p>
+<p><strong>projection</strong> Used for projected presentations, like slides</p>
+<p><strong>screen</strong> Used for computer screens</p>
+<p><strong>tty</strong> Used for media using a fixed-pitch character grid, like teletypes and terminals</p>
+<p><strong>tv</strong> Used for television-type devices</p>
+<h3 id="Media_Features">Media Features</h3>
+<p>Media features are use to provide the context for the media query. This allows you to target your devices for specific screen types. Some of the most commonly used media features are below</p>
+<h5 id="Height">Height</h5>
+<p>Describes the height of the viewport on a rendering device. Can be used with max and min.</p>
+<pre><code><span class="at_rule">@<span class="keyword">media</span> (height:<span class="number">800</span>px) </span>{ … }
+<span class="at_rule">@<span class="keyword">media</span> (max-height:<span class="number">800</span>px) </span>{ … }
+<span class="at_rule">@<span class="keyword">media</span> (min-height:<span class="number">800</span>px) </span>{ … }
+</code></pre><h5 id="Width">Width</h5>
+<p>Describes the width of the viewport on a rendering device</p>
+<pre><code><span class="at_rule">@<span class="keyword">media</span> (width:<span class="number">1080</span>px) </span>{ … }
+<span class="at_rule">@<span class="keyword">media</span> (max-width:<span class="number">1080</span>px) </span>{ … }
+<span class="at_rule">@<span class="keyword">media</span> (min-width:<span class="number">1080</span>px) </span>{ … }
+</code></pre><h5 id="Orientation">Orientation</h5>
+<p>Describes whether the device is in landscape or portrait mode. Very useful for tablet and mobile phones.</p>
+<pre><code><span class="at_rule">@<span class="keyword">media</span> (orientation: portrait) </span>{ … }
+<span class="at_rule">@<span class="keyword">media</span> (orientation: landscape) </span>{ … }
+</code></pre><h5 id="Device_Pixel_Ratio">Device Pixel Ratio</h5>
+<p>Used to target higher resolution screens on devices. Mainly retina displays on Apple products.</p>
+<pre><code>@media (<span class="keyword">min</span><span class="attribute">-device</span><span class="attribute">-pixel</span><span class="attribute">-ratio</span> : <span class="number">1.5</span>) { … }
+</code></pre><p>=====</p>
+<p>Chaining these together, we can provide media queries for most devices</p>
+<h5 id="Smartphones-28-Portrait_and_Landscape-29-">Smartphones(Portrait and Landscape)</h5>
+<pre><code>@media screen <span class="literal">and</span> handheld <span class="literal">and</span> (<span class="keyword">min</span><span class="attribute">-device</span><span class="attribute">-width</span> : <span class="number">320</span>px) <span class="literal">and</span> (<span class="keyword">max</span><span class="attribute">-device</span><span class="attribute">-width</span> : <span class="number">480</span>px) { … }
+</code></pre><h5 id="Retina_Devices">Retina Devices</h5>
+<pre><code>@media only screen <span class="literal">and</span> (<span class="attribute">-webkit</span><span class="attribute">-min</span><span class="attribute">-device</span><span class="attribute">-pixel</span><span class="attribute">-ratio</span> : <span class="number">1.5</span>), only screen <span class="literal">and</span> (<span class="keyword">min</span><span class="attribute">-device</span><span class="attribute">-pixel</span><span class="attribute">-ratio</span> : <span class="number">1.5</span>) { … }
+</code></pre><h5 id="Larger_Screens">Larger Screens</h5>
+<pre><code>@media only screen <span class="literal">and</span> (<span class="keyword">min</span><span class="attribute">-width</span> : <span class="number">1820</span>px) { … }
+</code></pre><h5 id="Printers">Printers</h5>
+<pre><code><span class="at_rule">@<span class="keyword">media</span> only print </span>{ … }
+</code></pre>
       
     </div>
     <footer>
