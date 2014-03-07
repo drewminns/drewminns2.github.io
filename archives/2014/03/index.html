@@ -1,0 +1,294 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Archives: 2014/3 | Making The Internet</title>
+  <meta name="author" content="Drew Minns">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="Making The Internet"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Making The Internet" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Making The Internet</a></h1>
+  <h2><a href="/">Drew Minns - WEBD 152</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/contact-information">Contact</a></li>
+    
+      <li><a href="/tools">Tools</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+<h2 class="archive-title">2014/3</h2>
+
+
+  
+    <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2014-03-07T01:46:33.000Z"><a href="/week-8---best-practices/">Mar 6 2014</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/week-8---best-practices/">Week 8 - Best Practices</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h1 id="Best_Practices_or-3a-_Why_we_do_the_things_we_do">Best Practices or: Why we do the things we do</h1>
+<p>So websites are built with code and images, and ultimately your code could look however you want it to, and your website would still work. However, what happens when you go back to edit your code and there’s no rhyme or reason to how it looks. Now, think of yourself as someone who’s working on a project that someone else started. That person left their code a mess, and it’s not part of your job, and quoted hours, cleaning it up.</p>
+<p>It’s important that we maintain standards within our code, not only to help ourselves and others, but there are significant performance and debugging issues when we don’t follow standards.</p>
+<p>Below are some common standards followed throughout the Industry</p>
+<h2 id="HTML">HTML</h2>
+<h3 id="Syntax">Syntax</h3>
+<ul>
+<li>Use tabs instead of spaces to format your code. Specifically, use 2 tabs.<ul>
+<li>In Sublime, go to View -&gt; Indentation and set Tab-Width to 2 and always use tabs.</li>
+</ul>
+</li>
+<li>Indent nested elements by using tabs</li>
+<li><p>Use double quotes on your attributes</p>
+<pre><code>  <span class="doctype">&lt;!DOCTYPE html&gt;</span>
+  <span class="tag">&lt;<span class="title">html</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">head</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">title</span>&gt;</span>Page title<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">body</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"images/company-logo.png"</span> <span class="attribute">alt</span>=<span class="value">"Company"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">h1</span> <span class="attribute">class</span>=<span class="value">"hello-world"</span>&gt;</span>Hello, world!<span class="tag">&lt;/<span class="title">h1</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code></pre></li>
+</ul>
+<h3 id="Practicality">Practicality</h3>
+<p>Use the least amount of markup at all times while maintaning simplicity. Avoid using unnecesary elements that will require extra CSS</p>
+<pre><code><span class="comment">&lt;!-- Bad --&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"profile"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"#"</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+
+<span class="comment">&lt;!-- Best --&gt;</span>
+<span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"#"</span> <span class="attribute">class</span>=<span class="value">"profile"</span>&gt;</span>
+</code></pre><h3 id="Attribute_Order">Attribute Order</h3>
+<p>Order your attributes accordingly to help with debugging your code.</p>
+<ul>
+<li>class</li>
+<li>id</li>
+<li>name</li>
+<li>data-*</li>
+<li>src, for, type, href</li>
+<li>title, alt</li>
+</ul>
+<h2 id="CSS">CSS</h2>
+<h3 id="Syntax-1">Syntax</h3>
+<ul>
+<li>Use tabs instead of spacing</li>
+<li>When grouping selectors, keep each selector to a single line</li>
+<li>Include one space before the opening curly brace</li>
+<li>Put closing brackets on a new line</li>
+<li>Include one space after each colon for each declaration</li>
+<li>Each CSS rule should appear on it’s own line</li>
+<li>Lowercase each hex value</li>
+<li>Use shorthand values where necessary</li>
+<li>Indent the CSS rules</li>
+</ul>
+<pre><code>    <span class="comment">/* Bad */</span>
+    <span class="class">.box1</span>, <span class="class">.box2</span>, <span class="class">.box3</span>, <span class="class">.box4</span><span class="rules">{
+    <span class="rule"><span class="attribute">color</span>:<span class="value"><span class="hexcolor">#000000</span></span></span>; <span class="rule"><span class="attribute">background-color</span>:<span class="value"><span class="hexcolor">#ffffff</span></span></span>;<span class="rule">}</span></span>
+    <span class="comment">/* Good */</span>
+    <span class="class">.box1</span>,
+    <span class="class">.box2</span>,
+    <span class="class">.box3</span>,
+    <span class="class">.box4</span> <span class="rules">{
+        <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#000000</span></span></span>;
+        <span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="hexcolor">#ffffff</span></span></span>;
+    <span class="rule">}</span></span>
+</code></pre><h3 id="Declaration_Order">Declaration Order</h3>
+<p>CSS Rules should be declared in a certain order in order to not group certain aspects together</p>
+<ul>
+<li>Position</li>
+<li>Box Model</li>
+<li>Typographic</li>
+<li>Visual</li>
+</ul>
+<pre><code>    <span class="class">.declaration-order</span> <span class="rules">{
+          <span class="comment">/* Positioning */</span>
+          <span class="rule"><span class="attribute">position</span>:<span class="value"> absolute</span></span>;
+          <span class="rule"><span class="attribute">top</span>:<span class="value"> <span class="number">0</span></span></span>;
+          <span class="rule"><span class="attribute">right</span>:<span class="value"> <span class="number">0</span></span></span>;
+          <span class="rule"><span class="attribute">bottom</span>:<span class="value"> <span class="number">0</span></span></span>;
+          <span class="rule"><span class="attribute">left</span>:<span class="value"> <span class="number">0</span></span></span>;
+          <span class="rule"><span class="attribute">z-index</span>:<span class="value"> <span class="number">100</span></span></span>;
+
+          <span class="comment">/* Box-model */</span>
+          <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>;
+          <span class="rule"><span class="attribute">float</span>:<span class="value"> right</span></span>;
+          <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100</span>px</span></span>;
+          <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">100</span>px</span></span>;
+
+          <span class="comment">/* Typography */</span>
+          <span class="rule"><span class="attribute">font</span>:<span class="value"> normal <span class="number">13</span>px <span class="string">"Helvetica Neue"</span>, sans-serif</span></span>;
+          <span class="rule"><span class="attribute">line-height</span>:<span class="value"> <span class="number">1.5</span></span></span>;
+          <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#333</span></span></span>;
+          <span class="rule"><span class="attribute">text-align</span>:<span class="value"> center</span></span>;
+
+          <span class="comment">/* Visual */</span>
+          <span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="hexcolor">#f5f5f5</span></span></span>;
+          <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">1</span>px solid <span class="hexcolor">#e5e5e5</span></span></span>;
+          <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">3</span>px</span></span>;
+
+          <span class="comment">/* Misc */</span>
+          <span class="rule"><span class="attribute">opacity</span>:<span class="value"> <span class="number">1</span></span></span>;
+    <span class="rule">}</span></span>
+</code></pre><h3 id="Shorthand_Notation">Shorthand Notation</h3>
+<p>Do not use shorthand notation if only applying a value to one dimension.</p>
+<pre><code><span class="comment">/* Bad example */</span>
+<span class="class">.element</span> <span class="rules">{
+      <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span> <span class="number">0</span> <span class="number">10</span>px</span></span>;
+      <span class="rule"><span class="attribute">background</span>:<span class="value"> red</span></span>;
+      <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="function">url(<span class="string">"image.jpg"</span>)</span></span></span>;
+      <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">3</span>px <span class="number">3</span>px <span class="number">0</span> <span class="number">0</span></span></span>;
+<span class="rule">}</span></span>
+
+<span class="comment">/* Good example */</span>
+<span class="class">.element</span> <span class="rules">{
+      <span class="rule"><span class="attribute">margin-bottom</span>:<span class="value"> <span class="number">10</span>px</span></span>;
+      <span class="rule"><span class="attribute">background-color</span>:<span class="value"> red</span></span>;
+      <span class="rule"><span class="attribute">background-image</span>:<span class="value"> <span class="function">url(<span class="string">"image.jpg"</span>)</span></span></span>;
+      <span class="rule"><span class="attribute">border-top-left-radius</span>:<span class="value"> <span class="number">3</span>px</span></span>;
+      <span class="rule"><span class="attribute">border-top-right-radius</span>:<span class="value"> <span class="number">3</span>px</span></span>;
+<span class="rule">}</span></span>
+</code></pre><h2 id="Advanced_CSS_Selectors">Advanced CSS Selectors</h2>
+<p><em>X Y</em> is descendent selector. Targets the specific element of Y inside the parent of X</p>
+<p><em>X + Y</em> is the adjacent selector. It will select only the element that is immediately preceded by the former element. In this case, only the first paragraph after each ul will have red text.</p>
+<pre><code><span class="tag">ul</span> + <span class="tag">p</span> <span class="rules">{
+       <span class="rule"><span class="attribute">color</span>:<span class="value"> red</span></span>;
+<span class="rule">}</span></span>
+</code></pre><p><em>X &gt; Y</em> will only select DIRECT children</p>
+<p><em>X ~ Y</em> sibling combinator is like adjacent selector but is not as specific. While an adjacent selector (ul + p) will only select the first element that is immediately preceded by the former selector, this one is more generalized. It will select, referring to our example above, any p elements, as long as they follow a ul.</p>
+<pre><code><span class="tag">ul</span> ~ <span class="tag">p</span> <span class="rules">{
+       <span class="rule"><span class="attribute">color</span>:<span class="value"> red</span></span>;
+<span class="rule">}</span></span>
+</code></pre><h2 id="Before_and_After_Elements">Before and After Elements</h2>
+<p>Every HTML element has before and after elements that you can style to add content to and style. These are especially useful when working with text or css shapes. Utilizing these tools, you can avoid the use of images, and build directly with code. </p>
+<p>Using the content CSS rule, you can inject text, or an object before or after an object. </p>
+<pre><code><span class="comment">// HTML</span>
+&lt;p&gt;This <span class="keyword">is</span> some text&lt;/p&gt;
+<span class="comment">// CSS</span>
+p { color:<span class="preprocessor">#000; }</span>
+p:before {
+    content: <span class="string">'Hello, '</span>;        
+}
+<span class="comment">//Will output</span>
+Hello, This <span class="keyword">is</span> some text
+</code></pre>
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+  
+
+  <nav id="pagination">
+  
+  
+  <div class="clearfix"></div>
+</nav>
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/Background/">Background</a><small>1</small></li>
+  
+    <li><a href="/tags/Semantics/">Semantics</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2014 Drew Minns
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>
