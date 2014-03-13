@@ -66,6 +66,203 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2014-03-13T23:49:18.000Z"><a href="/week-9---jquery/">Mar 13 2014</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/week-9---jquery/">Week 9 - jQuery</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h1 id="jQuery">jQuery</h1>
+<p>Download In-Class Files <a href=""><a href="https://github.com/drewminns/webd-starter">https://github.com/drewminns/webd-starter</a></a></p>
+<h4 id="Ok-2c-_first_things_first-">Ok, first things first.</h4>
+<p>Javascript is a programming language. jQuery is a library that uses Javascript to make programming user actions on a webpage easier. jQuery was developed to remove some of the more strenuous activities that come with selecting objects on a webpage and interacting, animating and more.</p>
+<h2 id="DOM">DOM</h2>
+<p>The Document Object Model is the framework of all elements on a webpage. This includes all objects and elements we place on the page. The web inspector in your browser is the best way to explore the DOM.</p>
+<h2 id="CDN_VS_Hosted">CDN VS Hosted</h2>
+<p>In order to use jQuery, we must import the library into our page. Because Javascript is built into every browser, we simply import the library via a script tag, that hooks into the existing Javascript system.</p>
+<p><a href="http://jquery.com/" target="_blank"><a href="http://jquery.com/">http://jquery.com/</a></a> hosts all the documentation needed and allows you to download versions of jQuery to include in your site heirarchy.</p>
+<p>Another option of including jQuery in your page, is using a CDN (Content Delivery Network) to serve the file to your browser. Using a CDN ensures that even if you forget to upload jQuery, it will be linked to your site.</p>
+<pre><code><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://code.jquery.com/jquery-1.11.0.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+</code></pre><h2 id="Version_1_vs_2-0">Version 1 vs 2.0</h2>
+<p>jQuery 2.0 was recently released and is the next logical iteration of jQuery to use. While we do our best in this industry to stay up to date, 2.0 does not support IE 6/7/8, which means that we would be leaving out a chunk of our users. That’s why it is best to currently stick with a 1.0 version, particularly 1.11.</p>
+<h2 id="Document_Ready">Document Ready</h2>
+<p>To ensure that our page has all functionality for a user to use, we have to ensure that the page is entirely loaded before applying any jQuery animations. To do that, we use a function to check that the DOM is ready. Write this function once and insert all jQuery inside.</p>
+<pre><code>$(document).ready(<span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+    <span class="comment">// Put jQuery in here</span>
+});
+</code></pre><p>Without ensuring that the document is loaded, we risk our javascript not being loaded and functionality being lost. It is imperative that we use the above script at all times when using jQuery.</p>
+<p>One of the easiest ways to check that jQuery is working is to put a console.log(“It works!”); inside of the document ready function.</p>
+<pre><code>$(document)<span class="preprocessor">.ready</span>(function() {
+    console<span class="preprocessor">.log</span>(<span class="string">"It works!"</span>)<span class="comment">;</span>
+})<span class="comment">;</span>
+</code></pre><p>With this, we can then use the console in our browser inspector to view the message.</p>
+<h2 id="Selecting_Objects">Selecting Objects</h2>
+<p>In vanilla Javascript, selecting an object was a convuluted task.</p>
+<pre><code>//HTML
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"myObject"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+//JS
+var x=document.getElementById("myObject");
+</code></pre><p>From there, we would have to use the variable <strong>x</strong> to apply animations. With jQuery we use the character <strong>$</strong> to instantiate a jQuery command and selecting an object.</p>
+<pre><code>//HTML
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"myObject"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+$(document).ready(function() {
+    $("#myObject").someFunction();
+});
+</code></pre><h2 id="Functions">Functions</h2>
+<p>jQuery has built in functions that we can utilize to make changes. They are all listed within the API documentation at <a href=""><a href="http://api.jquery.com/">http://api.jquery.com/</a></a>. They can be changed together and applied to an object as often as wanted.</p>
+<pre><code>$(<span class="string">"h3"</span>)<span class="preprocessor">.slideToggle</span>()<span class="preprocessor">.css</span>(<span class="string">"height"</span>, <span class="string">"300px"</span>)<span class="preprocessor">.hide</span>()<span class="comment">;</span>
+</code></pre><h2 id="Changing_CSS">Changing CSS</h2>
+<p>Once we have an object selected we can easily apply functions to it that are apart of the jQuery library.</p>
+<p>One of those handy functions is css. Using the css function, we can easily change the CSS attributes of an object.</p>
+<pre><code>$(<span class="string">"h1"</span>)<span class="preprocessor">.css</span>(<span class="string">"color"</span>, <span class="string">"#fff"</span>)<span class="comment">;</span>
+</code></pre><p>Because the jQuery is applied after the document is loaded, the changes will overwrite anything within the stylesheet.</p>
+<h2 id="Adding_Classes">Adding Classes</h2>
+<p>Another great usage of jQuery is adding classes to objects, which then have styles applied to them.</p>
+<pre><code>//HTML
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"box"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+
+// JS
+$("#box").addClass("blueBox");
+//Outputs
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"box"</span> <span class="attribute">class</span>=<span class="value">"blueBox"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre><h2 id="Inserting_text_or_HTML_to_an_object">Inserting text or HTML to an object</h2>
+<p>Another group of functions that can be utilized is text() and html(). Using these functions, you can insert content inside of a selected object. With text(), you can insert simple plain text into an object. With the html() function, you can insert html inside of the selected element.</p>
+<pre><code>//HTML
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"one"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"two"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+//JS
+$("#one").text("New Content");
+$("#two").html("<span class="tag">&lt;<span class="title">h2</span>&gt;</span>Look at me!<span class="tag">&lt;/<span class="title">h2</span>&gt;</span>");
+//Outputs
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"one"</span>&gt;</span>New Content<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"two"</span>&gt;</span><span class="tag">&lt;<span class="title">h2</span>&gt;</span>Look at me!<span class="tag">&lt;/<span class="title">h2</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre><p>Allowing with inserting content inside of an object, we can use .prepend() and .append() to specify where in the object we want to insert the content.</p>
+<p><strong>append();</strong></p>
+<pre><code>//HTML
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"one"</span>&gt;</span>
+    Hello
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"two"</span>&gt;</span>
+    Hello
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+//JS
+$("#one").append("<span class="tag">&lt;<span class="title">p</span>&gt;</span>Goodbye<span class="tag">&lt;/<span class="title">p</span>&gt;</span>");
+//Output
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"one"</span>&gt;</span>
+    Hello
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>Goodbye<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"two"</span>&gt;</span>
+    Hello
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre><p><strong>prepend();</strong></p>
+<pre><code>//HTML
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"one"</span>&gt;</span>
+    Hello
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"two"</span>&gt;</span>
+    Hello
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+//JS
+$("#one").append("<span class="tag">&lt;<span class="title">p</span>&gt;</span>Goodbye<span class="tag">&lt;/<span class="title">p</span>&gt;</span>");
+$("#two").prepend("<span class="tag">&lt;<span class="title">p</span>&gt;</span>Goodbye<span class="tag">&lt;/<span class="title">p</span>&gt;</span>");
+//Output
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"one"</span>&gt;</span>
+    Hello
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>Goodbye<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"two"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>Goodbye<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+    Hello
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre><h2 id="Event_Handlers">Event Handlers</h2>
+<p>jQuery comes with a wide array of tools used to interact with an object. These handlers bind to the Javascript events that occur in a browser.</p>
+<p>Events pertaining to a users mouse actions include click, hover, mousedown, mouseup, mouseleave and more. For the full list, check out <a href=""><a href="http://api.jquery.com/category/events/mouse-events/">http://api.jquery.com/category/events/mouse-events/</a></a></p>
+<p>For events pertaining to keyboard actions, read <a href=""><a href="http://api.jquery.com/category/events/keyboard-events/">http://api.jquery.com/category/events/keyboard-events/</a></a></p>
+<p>There are many more that can be utilized with the browser itself, a form or a document loading. <a href=""><a href="http://api.jquery.com/category/events/">http://api.jquery.com/category/events/</a></a></p>
+<h3 id="Every_action_needs_a_reaction">Every action needs a reaction</h3>
+<p>For every event handler used, you typically would need to include some to happen. For example, click an object and turn another object green. To do this, we select an object, attach an event handler to it, instatiate a function and insert the reaction within. See below</p>
+<pre><code><span class="comment">//CSS</span>
+<span class="comment">#blue {</span>
+    color: <span class="comment">#0000ff;</span>
+}
+<span class="comment">//HTML</span>
+&lt;h1&gt;Click&lt;/h1&gt;
+&lt;div id=<span class="string">"blue"</span>&gt;Hello&lt;/div&gt;
+<span class="comment">//JS</span>
+<span class="comment">// Select object and apply event handler</span>
+$(<span class="string">"h1"</span>).click(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+    <span class="comment">// Apply change to another object</span>
+    $(<span class="string">"#blue"</span>).css(<span class="string">"color"</span>, <span class="string">"#00ff00"</span>);
+});
+</code></pre><p>The above example would work like this. When the h1 element is clicked, the div with the ID of blue, would have it’s text colour changed to green (#00ff00).</p>
+<h3 id="Apply_to_itself">Apply to itself</h3>
+<p>Now, what if we didn’t want the click to apply a change to another element, we wanted the click to change itself. We can simply use <strong>this</strong> as the selector.</p>
+<pre><code><span class="comment">//HTML</span>
+&lt;h1&gt;Click&lt;/h1&gt;
+&lt;div id=<span class="string">"blue"</span>&gt;Hello&lt;/div&gt;
+<span class="comment">//JS</span>
+<span class="comment">// Select object and apply event handler</span>
+$(<span class="string">"h1"</span>).click(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+    <span class="comment">// Apply change to another object</span>
+    $(<span class="keyword">this</span>).css(<span class="string">"color"</span>, <span class="string">"#00ff00"</span>);
+});
+</code></pre><p>Note that <strong>this</strong> is not inside quotes, because it is a root object. The output would be that the h1 would change colour once it is clicked.</p>
+<h2 id="Making_our_own_functions">Making our own functions</h2>
+<p>We can write our own functions to reuse throughout a page, much like how functions are created in regular Javascript. Be sure to include <strong>return this</strong> to return the change. The use of created functions are imperative to not repeating code over and over. Write it once, and call it as many times as needed.</p>
+<pre><code>// Instantiate a <span class="function"><span class="keyword">function</span> <span class="title">and</span> <span class="title">name</span> <span class="title">it</span> <span class="title">greenify</span>
+$.<span class="title">fn.greenify</span> = <span class="title">function</span><span class="params">()</span></span> {
+  // Apply CSS changes
+  this.css( <span class="string">"color"</span>, <span class="string">"green"</span> );
+  // Return the changes
+  <span class="keyword">return</span> this;
+};
+// Call greenify <span class="function"><span class="keyword">function</span> <span class="title">on</span> <span class="title">object</span>
+$<span class="params">("h1")</span></span>.greenify();
+</code></pre><h2 id="Animation">Animation</h2>
+<p>Yes, animation. The coolest part of it all. Goodbye Flash, hello Javascript. The way it should be. Animations fall in to the category of Effects in jQuery <a href=""><a href="http://api.jquery.com/category/effects/">http://api.jquery.com/category/effects/</a></a>. With animations, you can fade objects, hide, show, slide, etc. These work by manipulating the dimensions and opacity of HTML elements. They are best used in conjunction with an event handler.</p>
+<pre><code><span class="comment">// Using the generic animate effect, we can pass a css rule in to be manipulated on an event. This being on hover, we will change the font size to 48px</span>
+$(<span class="string">"h1#block"</span>).hover(<span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+    $(<span class="keyword">this</span>).animate({ <span class="string">"font-size"</span>:<span class="string">"48px"</span>}, <span class="number">1000</span>);
+}
+</code></pre><p>Oh, that number at the end? That’s the duration. It determines how long the animation will run. A number can be passed through that represents milliseconds. You can also use strings such as <strong>Fast</strong> and <strong>Slow</strong> to represent <strong>200</strong> and <strong>600</strong> milliseconds respectively.</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+  
+    <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2014-03-07T01:46:33.000Z"><a href="/week-8---best-practices/">Mar 6 2014</a></time>
       
       
