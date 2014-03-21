@@ -62,6 +62,129 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2014-03-21T03:10:58.000Z"><a href="/week-10---jquery-functions-and-plugins/">Mar 20 2014</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/week-10---jquery-functions-and-plugins/">Week 10 - jQuery Functions and Plugins</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p><a href="https://github.com/drewminns/lightbox" target="_blank">Download Exercise Files</a></p>
+<p>So we walked through jQuery last class, and discussed how to include it in your page, how to use event handlers to ‘listen’ for clicks, hovers and other actions. As well, we covered inserting text and HTML into objects on the webpage. A quick review:</p>
+<p>If we need a fuller review, see my last post</p>
+<h3 id="Including_jQuery">Including jQuery</h3>
+<p>Include jQuery in the head of your page or before the closing body tag either by using a CDN or including it directly in the folder structure of your site.</p>
+<pre><code> // From a CDN
+ <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://code.jquery.com/jquery-1.11.0.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+
+ // Directly in the project folder
+ <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"js/jquery-1.11.0.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+</code></pre><h3 id="Where_to_write_your_jQuery">Where to write your jQuery</h3>
+<p>Create a new JS file and write your jQuery there. Be sure to link it AFTER you call the jQuery library above. Be sure to include your document ready call in order to load all scripts after the entire page is loaded. The $ is same as writing jquery. It calls the library.</p>
+<pre><code> // Your jQuery file
+ <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"js/main.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+
+ // Main.js
+ $(document).ready(function() {
+      // Write your jQuery in here
+ });
+</code></pre><h3 id="Selecting_Objects">Selecting Objects</h3>
+<p>In order to select an html element on your page with jQuery, you can simply write $(‘objectname’).</p>
+<h2 id="Event_Handlers">Event Handlers</h2>
+<p>Providing interaction with objects is quite simple, you can state how an object is going to be interacted with and then the result. The result can be the object that was interacted with does something, or another element does.</p>
+<pre><code> //$(document).ready(<span class="function"><span class="keyword">function</span><span class="params">()</span></span> {
+
+      $(<span class="string">'#div'</span>).click(<span class="function"><span class="keyword">function</span><span class="params">()</span></span> {
+           // Do Something
+      });
+
+ });
+</code></pre><h2 id="Functions_and_Plugins">Functions and Plugins</h2>
+<p>This class is an in class exercise where the details will be discussed in further than in the notes. But we will be extending what we learned last week about selecting objects, event handlers and animations to create a lightbox tool for a gallery.</p>
+<h3 id="Creating_a_function">Creating a function</h3>
+<p>A function is an encapsulated, generic tool that provides some action, and can be reused whereever necessary. Much like an effect that we call after a selector, we can provide our own name for the function and call it when needed.</p>
+<pre><code> //Create a <span class="function"><span class="keyword">function</span> <span class="title">and</span> <span class="title">name</span> <span class="title">it</span> <span class="title">hello</span>
+ $.<span class="title">fn.hello</span> = <span class="title">function</span> <span class="params">()</span></span> {
+
+      //Give it some action <span class="keyword">and</span> apply it to <span class="string">'this'</span>
+      //In this case, changing the css of an object to have green text
+      this.css(<span class="string">"color"</span>, <span class="string">"green"</span>);
+
+      //Return the change
+      <span class="keyword">return</span> this
+
+ };
+
+ //Call the <span class="function"><span class="keyword">function</span> <span class="title">on</span> <span class="title">an</span> <span class="title">object</span>
+ $<span class="params">('#div')</span></span>.hello();
+</code></pre><p>In the above example, we created a function called hello(); and then applied to #div. Any text inside will be affected by the action we set in the function, which is changing the color of the text to green, via CSS.</p>
+<h3 id="Creating_a_plugin">Creating a plugin</h3>
+<p>A plugin is a function but often with other settings that you can call. More often than not, you call a plugin on an object, the exact same way that you call a function. In order to provide some flexibility to the user, you can set options that can use.</p>
+<pre><code> // hello.js
+ // Create a <span class="function"><span class="keyword">function</span> <span class="title">and</span> <span class="title">name</span> <span class="title">it</span> <span class="title">goodbye</span>
+ // <span class="title">This</span> <span class="title">plugin</span> <span class="title">can</span> <span class="title">go</span> <span class="title">in</span> <span class="title">a</span> <span class="title">seperate</span> <span class="title">file</span>, <span class="title">be</span> <span class="title">sure</span> <span class="title">to</span> <span class="title">link</span> <span class="title">to</span> <span class="title">the</span> <span class="title">file</span> <span class="title">on</span> <span class="title">your</span> <span class="title">main</span> <span class="title">page</span>, <span class="title">just</span> <span class="title">like</span> <span class="title">you</span> <span class="title">did</span> <span class="title">with</span> <span class="title">jQuery</span>
+ $.<span class="title">fn.hello</span> = <span class="title">function</span> <span class="params">(options)</span></span> {
+
+      // Define default settings <span class="keyword">for</span> the plugin
+      // Here we are saying, black text <span class="keyword">and</span> line height of <span class="number">32</span>px
+      var settings = $.extend({
+           color: <span class="string">"#000"</span>,
+           lineHeight: <span class="string">"32px"</span>
+      }, options);
+
+      // Return the changes along with the default settings
+      <span class="keyword">return</span> this.css({
+           color: settings.color,
+           lineHeight: settings.lineHeight
+      });
+ }
+
+ // main.js
+ $(document).ready(<span class="function"><span class="keyword">function</span><span class="params">()</span></span> {
+
+      // Call the plugin <span class="keyword">and</span> use the settings to input your own values
+      $(<span class="string">'#div'</span>).hello({
+           color: <span class="string">"#00ff00"</span>,
+           lineHeight: <span class="string">"48px"</span>
+      });
+
+ });
+</code></pre>
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2014-03-13T23:49:18.000Z"><a href="/week-9---jquery/">Mar 13 2014</a></time>
       
       
