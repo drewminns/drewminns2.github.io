@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Archives: 2014/4 | Making The Internet</title>
+  <meta name="author" content="Drew Minns">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="Making The Internet"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Making The Internet" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Making The Internet</a></h1>
+  <h2><a href="/">Drew Minns - WEBD 152</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/contact-information">Contact</a></li>
+    
+      <li><a href="/tools">Tools</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+<h2 class="archive-title">2014/4</h2>
+
+
+  
+    <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2014-04-03T23:25:29.000Z"><a href="/json/">Apr 3 2014</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/json/">JSON</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p><a href="https://github.com/drewminns/json-starter" target="_blank">Download Exercise Files</a></p>
+<h2 id="The_internet_is_dynamic-">The internet is dynamic.</h2>
+<p>Most often, you’ll visit a website and see a range of content. Now, you leave and come back to that site an hour later. The content is different. One of the most important things on the internet is design, but the other is content. Content needs to change in order to keep users coming back to your page.</p>
+<h2 id="API">API</h2>
+<p>Application Programming Interface, or API is a tool used to specify how programs should work together. Many sties use API’s as a way to allow developers to share their information. API’s can be used in many ways, XML, JSON etc. Today we’ll be focusing on JSON</p>
+<h2 id="What_is_JSON-3f-">What is JSON?</h2>
+<p>Javascript Object Notation is the name of one of the most widely used formats included in API’s. It’s written in pure Javascript and meant to be easily read by computers and humans.</p>
+<h3 id="Javascript_Object">Javascript Object</h3>
+<p>Everything in Javascript is an object. We interact with objects throughout javascript. Variables are objects, as well in jQuery, referencing an element via the $(‘name’) method is selecting an object.</p>
+<p>JSON can be a single object that contains many values or an array that contains much more information. JSON Data is written as name/value pairs, which evaluate to simple variables.</p>
+<h2 id="JSON_Syntax">JSON Syntax</h2>
+<h3 id="Name-2f-Value_Pairs">Name/Value Pairs</h3>
+<p>Data is required to stated with a name and a value in quotes, seperated by a colon. The standard syntax for writing names is camel case with no spaces ie ‘firstname’.</p>
+<pre><code><span class="comment">// JSON</span>
+<span class="string">"firstName"</span>: <span class="string">"Drew"</span>
+
+<span class="comment">// Evaluates to</span>
+<span class="keyword">var</span> firstName = <span class="string">"Drew"</span>
+</code></pre><h3 id="JSON_Objects">JSON Objects</h3>
+<p>JSON objects are written inside curly braces and can contain multiple name/value pairs</p>
+<pre><code><span class="comment">// JSON</span>
+{ <span class="string">"firstName"</span>: <span class="string">"Drew"</span>, <span class="string">"lastName"</span>: <span class="string">"Minns"</span>, <span class="string">"favouriteFood"</span>: <span class="string">"Burritos"</span>}
+
+<span class="comment">// Evaluates to</span>
+<span class="keyword">var</span> firstName = <span class="string">"Drew"</span>;
+<span class="keyword">var</span> lastName = <span class="string">"Minns"</span>;
+<span class="keyword">var</span> favouriteFood = <span class="string">"Burritos"</span>;
+</code></pre><h3 id="JSON_Array">JSON Array</h3>
+<p>Arrays can be used to define multiple objects. They are defined with a name and square brackets.</p>
+<pre><code><span class="comment">// JSON</span>
+<span class="string">"people"</span>: <span class="matrix">[
+    {<span class="string">"firstName"</span>: <span class="string">"Drew"</span>, <span class="string">"lastName"</span>: <span class="string">"Minns"</span>, <span class="string">"favouriteFood"</span>: <span class="string">"Burritos"</span>}
+    {<span class="string">"firstName"</span>: <span class="string">"Alice"</span>, <span class="string">"lastName"</span>: <span class="string">"Cooper"</span>, <span class="string">"favouriteFood"</span>: <span class="string">"Chicken"</span>}
+    {<span class="string">"firstName"</span>: <span class="string">"Ozzy"</span>, <span class="string">"lastName"</span>: <span class="string">"Osborne"</span>, <span class="string">"favouriteFood"</span>: <span class="string">"Bat"</span>}
+]</span>
+</code></pre><p>The above array is named ‘people’ and contains three objects, each containing values for firstName, lastName and favouriteFood.</p>
+<h2 id="Traversing_JSON">Traversing JSON</h2>
+<p>In order to access values within JSON, we need to recognize that JSON has a heirarchy and different levels. Take the following example.</p>
+<pre><code><span class="comment">// JSON</span>
+<span class="keyword">var</span> myData = {
+    <span class="string">"firstName"</span>: <span class="string">"Drew"</span>,
+    <span class="string">"lastName"</span>: <span class="string">"Minns"</span>,
+    <span class="string">"details"</span>: [
+        {
+        <span class="string">"favouriteFood"</span>: <span class="string">"Burritos"</span>,
+        <span class="string">"age"</span>: <span class="string">"29"</span>
+        }
+    ]
+    }
+</code></pre><p>The firstName, lastName values are on the root level. favouriteFood and age however are within details. JSON can be many levels deep. To traverse JSON, you need to build a path to access those objects. The basic example below will show how to access the objects in the above JSON feed by their names and apply the values to variables.</p>
+<pre><code>// Take the values <span class="keyword">of</span> firstName <span class="keyword">and</span> lastName <span class="keyword">and</span> save them <span class="keyword">to</span> a <span class="keyword">variable</span> called name
+var name = myData.firstName + myData.lastName;
+
+// <span class="keyword">Access</span> the value <span class="keyword">of</span> favouriteFood <span class="keyword">and</span> apply it <span class="keyword">to</span> the <span class="keyword">variable</span> food. Note how we have <span class="keyword">to</span>
+// reference the name <span class="keyword">of</span> the details <span class="keyword">array</span> <span class="keyword">to</span> get details inside
+var food = myData.details.favouriteFood;
+</code></pre><p>// Access the age object inside details<br>var age = myData.details.age;</p>
+<h2 id="Numbering">Numbering</h2>
+<p>When counting in Javascript, it is important to recogize that counting doesn’t start at 1. It starts at zero and goes up from there. If you are referencing the first object, you need to say 0 instead of 1.</p>
+<pre><code>var jsonArray = <span class="cell">{
+    "data": [
+        {"item": "item1"}</span>,
+        <span class="cell">{"item": "item2"}</span>,
+        <span class="cell">{"item": "item3"}</span>
+    ]
+}
+</code></pre><p>So take the example JSON above. In the array called Data, we have three objects that contain items called ‘item’ with different values for each. To access those values we need to reference each object individually. The syntax to do requires calling what item you would like. For example, if we want the contents of the second object in the data array, we would refer to it as [1]. Note the square brackets around the number.</p>
+<pre><code><span class="comment">// Example to get the second object.</span>
+var secondObject = <span class="transposed_variable">jsonArray.</span>data<span class="matrix">[<span class="number">1</span>].</span>item;
+
+<span class="comment">// Which will output 'item2'</span>
+</code></pre><h2 id="Outputting_Data">Outputting Data</h2>
+<p>To output data, simply use jQuery (or plain javascript) to reference the JSON object and apply it to an object.</p>
+<pre><code>// App<span class="operator"><span class="keyword">end</span> <span class="keyword">to</span> body
+$(secondObject).appendTo(<span class="string">"body"</span>);</span>
+</code></pre><h2 id="External_Data">External Data</h2>
+<p>jQuery offers a useful method for accessing data that is not stored in the same file as the rest of your code. the getJSON method allows an external source of JSON be pulled directly into your code and be interacted with.</p>
+<pre><code><span class="comment">// feed.json</span>
+{
+    <span class="string">"users"</span>: <span class="matrix">[
+        {
+            <span class="string">"firstName"</span>: <span class="string">"Drew"</span>,
+            <span class="string">"lastName"</span>: <span class="string">"Minns"</span>,
+            <span class="string">"age"</span>: <span class="string">"29"</span>
+        },
+        {
+            <span class="string">"firstName"</span>: <span class="string">"David"</span>,
+            <span class="string">"lastName"</span>: <span class="string">"Bowie"</span>,
+            <span class="string">"age"</span>: <span class="string">"67"</span>
+        },
+        {
+            <span class="string">"firstName"</span>: <span class="string">"Peter"</span>,
+            <span class="string">"lastName"</span>: <span class="string">"Gabriel"</span>,
+            <span class="string">"age"</span>: <span class="string">"64"</span>
+        }
+    ]</span>
+}
+
+<span class="comment">// app.js</span>
+
+$(document).ready(<span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+
+    <span class="comment">// Call the json by the filename and path and apply a name to the information (data)</span>
+    $.getJSON(<span class="string">'feed.json'</span>, <span class="function"><span class="keyword">function</span><span class="params">(data)</span> {</span>
+
+        <span class="comment">// Get First User information</span>
+        var firstUserName = <span class="transposed_variable">data.</span>users<span class="matrix">[<span class="number">0</span>].</span>firstName;
+
+        <span class="comment">// Apply to HTML</span>
+        $(<span class="string">"body"</span>).append(firstUserName);
+
+    });
+
+});
+</code></pre>
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+  
+
+  <nav id="pagination">
+  
+  
+  <div class="clearfix"></div>
+</nav>
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/Background/">Background</a><small>1</small></li>
+  
+    <li><a href="/tags/Semantics/">Semantics</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2014 Drew Minns
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>
